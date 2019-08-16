@@ -1,0 +1,75 @@
+@charset "utf-8";
+/* CSS Document */
+
+.box { width: 1000px; margin: 0 auto;}
+.headerbox { background: url(../images/v5/bg-f-header.gif) repeat-x; height: 79px; line-height: 79px; padding: 0 20px; margin-bottom: 10px;}
+.headerbox li { float: left; margin-left: 20px;}
+.headerbox li a { color: #fff; text-decoration: none;}
+.headerbox li a:hover { text-decoration: underline;}
+
+.c-box1 { background: url(../images/v5/bg-f-content1.gif) left top no-repeat; height: 11px;}
+.c-box2 { background: url(../images/v5/bg-f-left.gif) left top repeat-y #f9f9f9; overflow: hidden;}
+.c-box3 { background: url(../images/v5/bg-f-content2.gif) left top no-repeat; height: 10px;}
+.c-leftbox { width: 200px; float: left; padding: 10px 0;}
+.c-cellbox dt a { width: 176px; height: 30px; line-height: 30px; background: url(../images/v5/bg-f-li2.gif) 10px center no-repeat #e7eaee; display: block; padding-left: 24px; color: #30427f; font-weight: bold; font-size: 14px; text-decoration: none;}
+.c-cellbox dt a:hover, .c-cellbox dt a.now { background: url(../images/v5/bg-f-li1.gif) 10px center no-repeat #4673b8; color: #fff; text-decoration: none;}
+.c-cellbox dd ul { margin:  10px 10px 10px 40px; width: 150px;}
+.c-cellbox dd ul li { padding: 10px 0;}
+.c-cellbox dd ul li a { color: #9195a3; text-decoration: none;}
+.c-cellbox dd ul li a:hover, .c-cellbox dd ul li a.now { color: #30427f; text-decoration: none; font-weight: bold;}
+
+.c-rightbox { width: 760px; float: right; padding: 15px;}
+.c-exbox { background: #f0f0f0; padding: 10px; margin-bottom: 15px;}
+.c-exbox dt { line-height: 24px; color: #6a6861; font-weight: bold; padding: 0 0 5px 10px; border-bottom: 1px solid #d0cdcd; line-height: 30px; margin-bottom: 5px; p}
+.c-exbox dd li { list-style: decimal; color: #464e5c; line-height: 30px; margin-left: 30px;}
+.c-infobox dt { background: url(../images/v5/bg-f-title.gif) 10px center no-repeat #80bb2d; height: 30px; line-height: 30px; font-weight: bold; color: #fff; padding-left: 24px;} 
+.c-infobox dt a{ color:#fff;}
+.c-infobox dt a:hover{ text-decoration: none;}
+.c-infobox dd { padding: 20px 10px;}
+.c-infobox dd table td { padding: 9px 10px;}
+.c-infotitle { text-align: right; width: 80px; color: #636972;}
+.c-infoinput1 { width: 190px;color: #85878a;}
+.c-infoinput1 input { width: 184px; height: 24px; padding: 3px; border: 1px solid #d9d9df; background: #fff; color: #85878a; border-radius: 2px;}
+.c-info p { color: #999ca1; line-height: 18px;}
+p.wronginfo{ color: #db5331; background: url(../images/v5/icon-wrong1.png) left 0px no-repeat;*_background: url(../images/v5/icon-wrong1.png) left top no-repeat; padding-left: 0px; line-height: 20px;}
+.c-info p.wronginfo { color: #db5331; background: url(../images/v5/icon-wrong1.png) left 0px no-repeat;*_background: url(../images/v5/icon-wrong1.png) left top no-repeat; padding-left: 0px; line-height: 20px;}
+.c-infoinput1 select {  width: 190px; height: 34px; padding: 3px; border: 1px solid #d9d9df; background: #fff; color: #85878a; border-radius: 2px; outline: none; *+height: 30px; *+line-height: 30px;}
+.c-infoinput2 span { display: inline-block; margin-right: 10px;}
+.c-infoinput2 input { margin-right: 3px; vertical-align: text-bottom; *+vertical-align: middle;} 
+.c-infoinput2 ul li { float: left; margin-right: 10px;}
+.c-pic { float: left; width: 410px;}
+.c-pic li { padding-bottom: 25px;}
+.c-picbtn { margin: 30px 0 0 20px; display: inline-block;}
+.c-picbtn input, .c-btn input { height: 30px; background: url(../images/v5/bg-btn1.gif) repeat-x; border: 1px solid #d4d5d9; padding: 0 25px; cursor: pointer; border-radius: 2gpx;}
+
+.c-picex { border-left: 1px dashed #ccc9c9; width: 155px; float: right; padding-left: 20px;}
+.c-picex dt { background: url(../images/v5/bg-f-title2.gif) no-repeat; color: #605f5f; height: 26px; line-height: 26px; text-align: center; width: 111px; padding:0;}
+.c-picex dd li { list-style: decimal; color: #8c8b8b; margin-left: 10px; line-height: 20px; padding-bottom: 5px;}
+
+.c-textarea textarea { width: 354px; height: 64px; padding: 3px; border: 1px solid #d9d9df; background: #fff; color: #85878a; border-radius: 2px; outline: none; resize: none;}
+.c-btn { text-align: center;}
+.c-btn span { margin: 0 8px; display: inline-block; padding-top: 20px;}
+
+.f-footerbox { background: #dfe4dc; height: 40px; line-height: 40px; color: #5d5d81; margin-top: 1px; text-align: center;}
+
+.f-infobox { background: url(../images/v5/icon-f-info.png) 8px center no-repeat #f7fac9; color: #c07e41; height: 30px; line-height: 28px; line-height: 30px/9; padding-left: 30px; margin-bottom: 10px;}
+.f-infobox a { color: #cc4646; font-weight: bold; margin: 0 5px; text-decoration: none;}
+.f-infobox a:hover { text-decoration: underline;}
+/*张永娜*/
+.c-exbox span{ font-weight:100;}
+.c-exbox .zyn_shenq strong{ color:#259c00;}
+.c-exbox .zyn_shenq img{ margin:7px 0px 0px 15px;}
+.zyn_jiacu{ color:#5c5c5c;}
+
+.c-exbox .zyn_buzhou{ height:60px;background:url(../images/v5/zyn_buzhou1.png) no-repeat center 0px; margin-top:15px;}
+.c-exbox .zyn_buzhou2{background:url(../images/v5/zyn_buzhou2.png) no-repeat center 0px;}
+.c-exbox .zyn_buzhou3{background:url(../images/v5/zyn_buzhou3.png) no-repeat center 0px;}
+.c-exbox .zyn_buzhou li{ float:left; margin-top:20px; list-style:none; text-align:left; margin-left:20px;}
+.zyn_jianju{ width:165px;}
+.zyn_jianju2{width:210px;}
+.c-infobox dt span{ font-weight:100}
+.c-infobox dt font a{ display:block; width:70px; height:20px; text-align:center; line-height:20px; background:#fff; color:#80bb2d; border:1px solid #66ae00; float:right; margin:4px 15px 0px 0px; font-weight:100; text-decoration:none}
+.c-infobox dt font a:hover{text-decoration:underline}
+.zyn_twobu{ padding:0px;}
+
+

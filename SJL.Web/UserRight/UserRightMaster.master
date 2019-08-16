@@ -1,0 +1,17 @@
+﻿<%@ Master Language="C#" MasterPageFile="~/Default/SJLMaster.Master" AutoEventWireup="true" CodeBehind="UserRightMaster.master.cs" Inherits="SJL.Web.UserRight.UserRightMaster" %>
+<asp:Content ID="Content1" ContentPlaceHolderID="head" runat="server">
+    <asp:ContentPlaceHolder ID="head" runat="server"></asp:ContentPlaceHolder>
+</asp:Content>
+<asp:Content ID="Content2" ContentPlaceHolderID="content" runat="server">
+    <div id="leftNav">
+
+<a href="manageuser.aspx">系统用户管理</a><br /><hr />
+<a href="UserRolePage.aspx">用户角色管理</a><br /><hr />
+<a href="ModulePage.aspx">功能模块管理</a><br /><hr />
+<a href="RoleRightPage.aspx">角色权限管理</a><br /><hr /> 
+<a href="ChangePassPage.aspx">修改密码</a><br /><hr /> 
+</div>
+<div id="rightContent">
+<asp:ContentPlaceHolder ID="ContentPlaceHolder1" runat="server"></asp:ContentPlaceHolder>
+</div>
+</asp:Content>

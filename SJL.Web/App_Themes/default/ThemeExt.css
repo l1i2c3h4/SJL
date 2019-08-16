@@ -1,0 +1,6 @@
+﻿.oddRow{ background-color:#EFF3FB;}
+.evenRow{background-color:White;}
+.hoverRow{background-color:#ffffdd;}
+input[type=text]{ border:solid 1px #9af;}
+input[type=password]{border:solid 1px #9af;}
+select{border:solid 1px; background-color:#ffd; width:120px;}

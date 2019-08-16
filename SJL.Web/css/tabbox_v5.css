@@ -1,0 +1,39 @@
+@charset "utf-8";
+/* CSS Document */
+
+.tabbox { width: 80px; background: #404754; float: left; display: inline; position: fixed; bottom: 0; top: 0; left:0;}
+.tabul { margin-top: 10px;}
+.tabbox li.tab { text-align: center;}
+.tabbox li.tab a.first { height: 32px; width: 80px; display: block; padding-top: 40px; color: #cfd3da; text-decoration: none;}
+.tabbox li.tab a.first ul.tabsecond li { display: none;}
+.tabbox li.tab a.first:hover ul.tabsecond { display: block; border: 1px solid red;}
+.tabbox li a { background: url(../images/v5/icon-tab1.gif) no-repeat;}
+.tabbox li a:hover { background: url(../images/v5/icon-tab2.png) no-repeat #2b2e35;}
+.tabbox li.tabhome a { background-position: 0 0;}
+.tabbox li.tabhome a:hover { background-position: 0 0;color: #fff0a0; font-weight: bold;}
+.tabbox li.tabhome a.now { background: url(../images/v5/icon-tab2.png) 0 0 no-repeat #2b2e35; color: #fff0a0; font-weight: bold;}
+.tabbox li.tabperson a { background-position: 0 -72px;}
+.tabbox li.tabperson a:hover { background-position: 0 -72px; color: #fff0a0; font-weight: bold;}
+.tabbox li.tabperson a.now { background: url(../images/v5/icon-tab2.png) 0 -72px no-repeat #2b2e35; color: #fff0a0; font-weight: bold;}
+.tabbox li.tabapp a { background-position: 0 -144px;}
+.tabbox li.tabapp a:hover { background-position: 0 -144px; color: #fff0a0; font-weight: bold;}
+.tabbox li.tabapp a.now { background: url(../images/v5/icon-tab2.png) 0 -144px no-repeat #2b2e35; color: #fff0a0; font-weight: bold;}
+.tabbox li.tablimit a { background-position: 0 -216px;}
+.tabbox li.tablimit a:hover { background-position: 0 -216px; color: #fff0a0; font-weight: bold;}
+.tabbox li.tablimit a.now { background: url(../images/v5/icon-tab2.png) 0 -216px no-repeat #2b2e35; color: #fff0a0; font-weight: bold;}
+.tabbox li.tabsystem a { background-position: 0 -288px;}
+.tabbox li.tabsystem a:hover { background-position: 0 -288px; color: #fff0a0; font-weight: bold;}
+.tabbox li.tabsystem a.now { background: url(../images/v5/icon-tab2.png) 0 -288px no-repeat #2b2e35; color: #fff0a0; font-weight: bold;}
+
+
+.tabbox li.tabsystem ul { background: #333841; margin-top: 1px;}
+.tabbox li.tabsystem li{ text-align: left;}
+.tabbox li.tabsystem a.second { color: #cfd3da; text-decoration: none; height: 30px; line-height: 30px; padding-left: 22px; width: 58px; background: url(../images/v5/icon-lipoint.png) no-repeat; display: block;}
+.tabbox li.tabsystem a.second:hover, .tabbox li.tabsystem a.secondnow { background:  url(../images/v5/icon-lipoint.png) no-repeat #2b2e35; font-weight: normal; color: #fff;}
+.tabbox li.tabsystem li.nub1 a, .tabbox li.tabsystem li.nub1 a:hover { background-position: 8px 0;}
+.tabbox li.tabsystem li.nub2 a, .tabbox li.tabsystem li.nub2 a:hover { background-position: 8px -30px;}
+.tabbox li.tabsystem li.nub3 a, .tabbox li.tabsystem li.nub3 a:hover { background-position: 8px -60px;}
+.tabbox li.tabsystem li.nub4 a, .tabbox li.tabsystem li.nub4 a:hover { background-position: 8px -90px;}
+.tabbox li.tabsystem li.nub5 a, .tabbox li.tabsystem li.nub5 a:hover { background-position: 8px -120px;}
+.tabbox li.tabsystem li.nub6 a, .tabbox li.tabsystem li.nub6 a:hover { background-position: 8px -150px;}
+

@@ -1,0 +1,18 @@
+body{font-size:9pt;background:#5A7080; font-weight:bold; } 
+table{border:1px #000000 solid;}
+b{font-size:10pt;}
+input.text{border:1px #404040 solid;font-size:9pt;padding:2px 0px 2px 5px;}
+a{color:#FFFF00;}
+    div#main
+    {
+         position:absolute; 
+         width:1000px;        
+         text-align:center;     
+         margin-left:auto;
+         margin-right:auto;   
+   	} 
+   	div#login
+   	{
+   	width:730px; display:block; margin-left:auto; margin-right:auto; background-color:#eee;
+   	padding:8px;
+   	}

@@ -1,0 +1,10 @@
+﻿<asp:GridView runat="server" CellPadding="4"  ForeColor="#333333" GridLines="None">
+        <RowStyle CssClass="oddRow" />
+        <FooterStyle BackColor="#507CD1" Font-Bold="True" ForeColor="White" />
+        <PagerStyle BackColor="#2461BF" ForeColor="White" HorizontalAlign="Center" />
+        <SelectedRowStyle BackColor="#D1DDF1" Font-Bold="True" ForeColor="#333333" />
+        <HeaderStyle BackColor="#507CD1" Font-Bold="True" ForeColor="White" />
+        <EditRowStyle BackColor="#2461BF" />
+        <AlternatingRowStyle  CssClass="evenRow" />
+          <EmptyDataTemplate> <div style="color:red; font-size:14px; border:solid 1px blue; padding:30px; ">没有符合条件的数据，请添加数据或修改查询条件。</div>  </EmptyDataTemplate>
+</asp:GridView>

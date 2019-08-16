@@ -1,0 +1,22 @@
+﻿body { font-family:宋体; font-size:small;  	}
+/*最外层DIV，整个页面居中*/
+div#main{width:1000px;  margin-left:auto;  margin-right:auto;   }
+a{text-decoration:none; color:Black;}
+a:hover{color:Orange; font-weight:bold;}
+/*div#NavMenu页面顶部导航菜单*/
+div#NavMenu{background-color: #003399;	font-size:medium; font-weight:bold; height:70px; vertical-align:middle;}
+div#NavMenu a {color:White; }
+div#NavMenu a:hover{ background-color:#ddddff; color:black;	}
+/*带图片的菜单，上图片，下文字*/
+div#NavMenu div.ImageMenu{ text-align:center; float:left; margin:auto 10px;}
+div#NavMenu div.ImageMenu img{height:48px;}
+/*左侧导航栏*/
+div#leftNav{ width:150px; overflow:hidden; float:left; background-color:#eff; padding:10px;}
+div#leftNav>hr{ color:#eee;}
+div#rightContent{float:left; border:dashed 1px silver; width:820px; overflow:auto;}
+/*表的行鼠标悬停效果*/
+.ui-button {cursor:pointer;margin:0;outline-color:-moz-use-text-color;outline-style:none;outline-width:0;padding:0.4em 1em 0.5em;position:relative;text-align:center;text-decoration:none;}
+/*标题*/
+.title{color:#0B559B; font-weight:bold; font-size:14px;  }
+h3{color:#0B559B; font-weight:bold; font-size:14px;  }
+.error{font-weight:bold; color:Red;}

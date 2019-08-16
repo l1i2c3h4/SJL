@@ -1,0 +1,132 @@
+body
+{
+    margin:0px;
+    font-size:12px;
+}
+.MainPage {
+    background-image: url( '../images/RightAll_Flower.jpg' );
+    background-position-x: right;
+    background-position-y: top;
+    background-repeat: no-repeat;
+}
+
+a
+{
+    cursor:pointer;
+}
+
+.TitleBarRight
+{
+	
+	/*background-image: url( '../../Images/SubPage/TitleRight_Flower.jpg' );
+	width:482px;
+	background-repeat:no-repeat ;
+	background-position:right ;  */   
+	width:0.5%;
+   
+}
+.TitleBarLeft {
+    width: 99%;
+    text-align: center;
+    font-size: 16px;
+    font-weight: bold;
+    padding-top: 26px;
+}
+.TitleBarMiddle
+{
+	width:0.5%;
+}
+.TitleBarRow
+{
+	height:17px;
+}
+
+/*--- Mainpage --*/
+.MainBodyLeft
+{
+	width:0px;	
+}
+
+
+
+.Menu_Module {
+    font-size: 12px;
+    color: Black;
+    /*font-family:宋体;*/
+    font-weight: bold;
+    height: 34px;
+    background-image: url( '../images/Menu_ModuleBG_Flower.gif' );
+    background-repeat: no-repeat;
+    text-align: left;
+    width: 90px;
+    cursor: pointer;
+}
+.Menu_Module_MyBox
+{
+	font-size: 12px;
+	color: Black;
+	/*font-family:宋体;*/
+	font-weight:bold; 
+	height: 34px;
+	background-image: url( '../images/Menu_ModuleBG_Flower.gif' );
+	background-repeat:no-repeat;
+	text-align :left;
+	width:90px;
+	cursor:pointer;
+}
+.Menu_Module TD,.Menu_Module_MyBox TD
+{
+    padding-left:18px;
+}
+.Menu_Module TD SPAN
+{
+    padding-left:5px;
+}
+
+
+.Menu_Shadow
+{
+	height: 5px;
+	/*background-image: url( '../../Images/MainPage/Menu_Page_Mybox_Flower.gif' );*/
+}
+.Menu_Footer {
+    height: 220px;
+    background-image: url( '../images/Menu_Footer_Flower.jpg' );
+    background-repeat: no-repeat;
+}
+.Menu_Page
+{
+	font-size: 13px;
+	line-height: 17px;
+	font-weight: bold;
+	color: #FFFF99;
+}
+.Menu_Page_Mybox
+{
+	font-size: 12px;
+	color: #444444;
+	/*font-family:宋体;*/
+	background-image: none;
+	height:25px;
+	cursor:pointer;	
+}
+.Menu_Page_Mybox TD
+{
+    padding-left:13px;
+}
+.TopBarLeft {
+    background-image: url( '../images/TopLeft2_Flower1.gif' );
+}
+.TopBarRow
+{
+	height:70px;
+}
+
+.TopBarMiddle
+{
+  
+}
+
+.TopBarRight {
+    background-image: url( '../images/RightAll_Flower.jpg' );
+}
