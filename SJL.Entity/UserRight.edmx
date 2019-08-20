@@ -4,32 +4,14 @@
   <edmx:Runtime>
     <!-- SSDL content -->
     <edmx:StorageModels>
-    <Schema Namespace="SjlFrameworkModel.Store" Alias="Self" Provider="System.Data.SqlClient" ProviderManifestToken="2005" xmlns:store="http://schemas.microsoft.com/ado/2007/12/edm/EntityStoreSchemaGenerator" xmlns="http://schemas.microsoft.com/ado/2009/02/edm/ssdl">
-        <EntityContainer Name="SjlFrameworkModelStoreContainer">
-          <EntitySet Name="ApplicationModule" EntityType="SjlFrameworkModel.Store.ApplicationModule" store:Type="Tables" Schema="dbo" />
-          <EntitySet Name="RoleRight" EntityType="SjlFrameworkModel.Store.RoleRight" store:Type="Tables" Schema="dbo" />
-          <EntitySet Name="User" EntityType="SjlFrameworkModel.Store.User" store:Type="Tables" Schema="dbo" />
-          <EntitySet Name="UserRole" EntityType="SjlFrameworkModel.Store.UserRole" store:Type="Tables" Schema="dbo" />
-          <AssociationSet Name="FK_RoleRight_ApplicationModule" Association="SjlFrameworkModel.Store.FK_RoleRight_ApplicationModule">
-            <End Role="ApplicationModule" EntitySet="ApplicationModule" />
-            <End Role="RoleRight" EntitySet="RoleRight" />
-          </AssociationSet>
-          <AssociationSet Name="FK_RoleRight_UserRole" Association="SjlFrameworkModel.Store.FK_RoleRight_UserRole">
-            <End Role="UserRole" EntitySet="UserRole" />
-            <End Role="RoleRight" EntitySet="RoleRight" />
-          </AssociationSet>
-          <AssociationSet Name="FK_User_UserRole" Association="SjlFrameworkModel.Store.FK_User_UserRole">
-            <End Role="UserRole" EntitySet="UserRole" />
-            <End Role="User" EntitySet="User" />
-          </AssociationSet>
-        </EntityContainer>
+    <Schema Namespace="SjlFrameworkModel.Store" Provider="System.Data.SqlClient" ProviderManifestToken="2005" Alias="Self" xmlns:store="http://schemas.microsoft.com/ado/2007/12/edm/EntityStoreSchemaGenerator" xmlns:customannotation="http://schemas.microsoft.com/ado/2013/11/edm/customannotation" xmlns="http://schemas.microsoft.com/ado/2009/02/edm/ssdl">
         <EntityType Name="ApplicationModule">
           <Key>
             <PropertyRef Name="ID" />
           </Key>
-          <Property Name="ID" Type="char" Nullable="false" MaxLength="2" />
-          <Property Name="Name" Type="nvarchar" Nullable="false" MaxLength="30" />
-          <Property Name="URL" Type="nvarchar" Nullable="false" MaxLength="50" />
+          <Property Name="ID" Type="nvarchar" MaxLength="10" Nullable="false" />
+          <Property Name="Name" Type="nvarchar" MaxLength="30" Nullable="false" />
+          <Property Name="URL" Type="nvarchar" MaxLength="50" Nullable="false" />
           <Property Name="Description" Type="nvarchar" MaxLength="80" />
           <Property Name="IsPublic" Type="bit" Nullable="false" />
         </EntityType>
@@ -38,30 +20,31 @@
             <PropertyRef Name="RoleID" />
             <PropertyRef Name="ModuleID" />
           </Key>
-          <Property Name="RoleID" Type="char" Nullable="false" MaxLength="2" />
-          <Property Name="ModuleID" Type="char" Nullable="false" MaxLength="2" />
-          <Property Name="TheRight" Type="char" Nullable="false" MaxLength="1" />
+          <Property Name="RoleID" Type="nvarchar" MaxLength="10" Nullable="false" />
+          <Property Name="ModuleID" Type="nvarchar" MaxLength="10" Nullable="false" />
+          <Property Name="TheRight" Type="nchar" MaxLength="1" Nullable="false" />
         </EntityType>
         <EntityType Name="User">
           <Key>
             <PropertyRef Name="ID" />
           </Key>
-          <Property Name="ID" Type="nvarchar" Nullable="false" MaxLength="10" />
-          <Property Name="Password" Type="nvarchar" Nullable="false" MaxLength="20" />
-          <Property Name="UserName" Type="nvarchar" Nullable="false" MaxLength="10" />
-          <Property Name="RoleID" Type="char" Nullable="false" MaxLength="2" />
+          <Property Name="ID" Type="nvarchar" MaxLength="10" Nullable="false" />
+          <Property Name="Password" Type="nvarchar" MaxLength="20" Nullable="false" />
+          <Property Name="UserName" Type="nvarchar" MaxLength="10" Nullable="false" />
+          <Property Name="RoleID" Type="nvarchar" MaxLength="10" Nullable="false" />
+          <Property Name="Department" Type="nchar" MaxLength="10" Nullable="false" />
         </EntityType>
         <EntityType Name="UserRole">
           <Key>
             <PropertyRef Name="ID" />
           </Key>
-          <Property Name="ID" Type="char" Nullable="false" MaxLength="2" />
-          <Property Name="Name" Type="nvarchar" Nullable="false" MaxLength="10" />
+          <Property Name="ID" Type="nvarchar" MaxLength="10" Nullable="false" />
+          <Property Name="Name" Type="nvarchar" MaxLength="10" Nullable="false" />
           <Property Name="Description" Type="nvarchar" MaxLength="50" />
         </EntityType>
         <Association Name="FK_RoleRight_ApplicationModule">
-          <End Role="ApplicationModule" Type="SjlFrameworkModel.Store.ApplicationModule" Multiplicity="1" />
-          <End Role="RoleRight" Type="SjlFrameworkModel.Store.RoleRight" Multiplicity="*" />
+          <End Role="ApplicationModule" Type="Self.ApplicationModule" Multiplicity="1" />
+          <End Role="RoleRight" Type="Self.RoleRight" Multiplicity="*" />
           <ReferentialConstraint>
             <Principal Role="ApplicationModule">
               <PropertyRef Name="ID" />
@@ -72,8 +55,8 @@
           </ReferentialConstraint>
         </Association>
         <Association Name="FK_RoleRight_UserRole">
-          <End Role="UserRole" Type="SjlFrameworkModel.Store.UserRole" Multiplicity="1" />
-          <End Role="RoleRight" Type="SjlFrameworkModel.Store.RoleRight" Multiplicity="*" />
+          <End Role="UserRole" Type="Self.UserRole" Multiplicity="1" />
+          <End Role="RoleRight" Type="Self.RoleRight" Multiplicity="*" />
           <ReferentialConstraint>
             <Principal Role="UserRole">
               <PropertyRef Name="ID" />
@@ -84,8 +67,8 @@
           </ReferentialConstraint>
         </Association>
         <Association Name="FK_User_UserRole">
-          <End Role="UserRole" Type="SjlFrameworkModel.Store.UserRole" Multiplicity="1" />
-          <End Role="User" Type="SjlFrameworkModel.Store.User" Multiplicity="*" />
+          <End Role="UserRole" Type="Self.UserRole" Multiplicity="1" />
+          <End Role="User" Type="Self.User" Multiplicity="*" />
           <ReferentialConstraint>
             <Principal Role="UserRole">
               <PropertyRef Name="ID" />
@@ -96,6 +79,24 @@
           </ReferentialConstraint>
         </Association>
         <Function Name="sp_refreshRoleRight" Aggregate="false" BuiltIn="false" NiladicFunction="false" IsComposable="false" ParameterTypeSemantics="AllowImplicitConversion" Schema="dbo" />
+        <EntityContainer Name="SjlFrameworkModelStoreContainer">
+          <EntitySet Name="ApplicationModule" EntityType="Self.ApplicationModule" Schema="dbo" store:Type="Tables" />
+          <EntitySet Name="RoleRight" EntityType="Self.RoleRight" Schema="dbo" store:Type="Tables" />
+          <EntitySet Name="User" EntityType="Self.User" Schema="dbo" store:Type="Tables" />
+          <EntitySet Name="UserRole" EntityType="Self.UserRole" Schema="dbo" store:Type="Tables" />
+          <AssociationSet Name="FK_RoleRight_ApplicationModule" Association="Self.FK_RoleRight_ApplicationModule">
+            <End Role="ApplicationModule" EntitySet="ApplicationModule" />
+            <End Role="RoleRight" EntitySet="RoleRight" />
+          </AssociationSet>
+          <AssociationSet Name="FK_RoleRight_UserRole" Association="Self.FK_RoleRight_UserRole">
+            <End Role="UserRole" EntitySet="UserRole" />
+            <End Role="RoleRight" EntitySet="RoleRight" />
+          </AssociationSet>
+          <AssociationSet Name="FK_User_UserRole" Association="Self.FK_User_UserRole">
+            <End Role="UserRole" EntitySet="UserRole" />
+            <End Role="User" EntitySet="User" />
+          </AssociationSet>
+        </EntityContainer>
       </Schema></edmx:StorageModels>
     <!-- CSDL content -->
     <edmx:ConceptualModels>
@@ -123,7 +124,7 @@
           <Key>
             <PropertyRef Name="ID" />
           </Key>
-          <Property Name="ID" Type="String" Nullable="false" MaxLength="2" Unicode="false" FixedLength="true" />
+          <Property Name="ID" Type="String" Nullable="false" MaxLength="10" Unicode="true" FixedLength="false" />
           <Property Name="Name" Type="String" Nullable="false" MaxLength="30" Unicode="true" FixedLength="false" />
           <Property Name="URL" Type="String" Nullable="false" MaxLength="50" Unicode="true" FixedLength="false" />
           <Property Name="Description" Type="String" MaxLength="80" Unicode="true" FixedLength="false" />
@@ -135,9 +136,9 @@
             <PropertyRef Name="RoleID" />
             <PropertyRef Name="ModuleID" />
           </Key>
-          <Property Name="RoleID" Type="String" Nullable="false" MaxLength="2" Unicode="false" FixedLength="true" />
-          <Property Name="ModuleID" Type="String" Nullable="false" MaxLength="2" Unicode="false" FixedLength="true" />
-          <Property Name="TheRight" Type="String" Nullable="false" MaxLength="1" Unicode="false" FixedLength="true" />
+          <Property Name="RoleID" Type="String" Nullable="false" MaxLength="10" Unicode="true" FixedLength="false" />
+          <Property Name="ModuleID" Type="String" Nullable="false" MaxLength="10" Unicode="true" FixedLength="false" />
+          <Property Name="TheRight" Type="String" Nullable="false" MaxLength="1" Unicode="true" FixedLength="true" />
           <NavigationProperty Name="ApplicationModule" Relationship="SJL.Entity.FK_RoleRight_ApplicationModule" FromRole="RoleRight" ToRole="ApplicationModule" />
           <NavigationProperty Name="UserRole" Relationship="SJL.Entity.FK_RoleRight_UserRole" FromRole="RoleRight" ToRole="UserRole" />
         </EntityType>
@@ -148,14 +149,15 @@
           <Property Name="ID" Type="String" Nullable="false" MaxLength="10" Unicode="true" FixedLength="false" />
           <Property Name="Password" Type="String" Nullable="false" MaxLength="20" Unicode="true" FixedLength="false" />
           <Property Name="UserName" Type="String" Nullable="false" MaxLength="10" Unicode="true" FixedLength="false" />
-          <Property Name="RoleID" Type="String" Nullable="false" MaxLength="2" Unicode="false" FixedLength="true" />
+          <Property Name="RoleID" Type="String" Nullable="false" MaxLength="10" Unicode="true" FixedLength="false" />
           <NavigationProperty Name="UserRole" Relationship="SJL.Entity.FK_User_UserRole" FromRole="User" ToRole="UserRole" />
+          <Property Name="Department" Type="String" Nullable="false" MaxLength="10" FixedLength="true" Unicode="true" />
         </EntityType>
         <EntityType Name="UserRole">
           <Key>
             <PropertyRef Name="ID" />
           </Key>
-          <Property Name="ID" Type="String" Nullable="false" MaxLength="2" Unicode="false" FixedLength="true" />
+          <Property Name="ID" Type="String" Nullable="false" MaxLength="10" Unicode="true" FixedLength="false" />
           <Property Name="Name" Type="String" Nullable="false" MaxLength="10" Unicode="true" FixedLength="false" />
           <Property Name="Description" Type="String" MaxLength="50" Unicode="true" FixedLength="false" />
           <NavigationProperty Name="RoleRight" Relationship="SJL.Entity.FK_RoleRight_UserRole" FromRole="UserRole" ToRole="RoleRight" />
@@ -216,7 +218,8 @@
             <ScalarProperty Name="TheRight" ColumnName="TheRight" />
           </MappingFragment></EntityTypeMapping></EntitySetMapping>
           <EntitySetMapping Name="User"><EntityTypeMapping TypeName="SJL.Entity.User"><MappingFragment StoreEntitySet="User">
-            <ScalarProperty Name="ID" ColumnName="ID" />
+            <ScalarProperty Name="Department" ColumnName="Department" />
+                <ScalarProperty Name="ID" ColumnName="ID" />
             <ScalarProperty Name="Password" ColumnName="Password" />
             <ScalarProperty Name="UserName" ColumnName="UserName" />
             <ScalarProperty Name="RoleID" ColumnName="RoleID" />
@@ -243,6 +246,7 @@
         <DesignerProperty Name="ValidateOnBuild" Value="true" />
         <DesignerProperty Name="EnablePluralization" Value="False" />
         <DesignerProperty Name="IncludeForeignKeysInModel" Value="True" />
+        <DesignerProperty Name="UseLegacyProvider" Value="True" />
       </DesignerInfoPropertySet>
     </Options>
     <!-- Diagram content (shape and connector positions) -->

@@ -1,4 +1,4 @@
-﻿using System;
+using System;
 using System.Collections.Generic;
 using System.Web;
 using System.Web.UI;
@@ -98,6 +98,7 @@ namespace SJL.Web.Default
                 return;
             user.ID = userid.Text;
             user.UserName = userName.Text;
+            user.Department = department.Text;
             if (hiddenID.Value == newID)
                 UserBLL.add(user);
             else
