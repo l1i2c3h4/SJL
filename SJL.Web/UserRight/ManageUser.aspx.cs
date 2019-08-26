@@ -115,6 +115,8 @@ namespace SJL.Web.Default
         protected void pager1_PageChanged(object sender, EventArgs e)
         {
             bindUsers();
-        }        
+        }
+
+       
     }
 }

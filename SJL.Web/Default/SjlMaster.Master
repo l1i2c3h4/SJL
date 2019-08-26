@@ -1,7 +1,6 @@
 ﻿<%@ Master Language="C#" AutoEventWireup="true" CodeBehind="SjlMaster.Master.cs" Inherits="SJL.Web.SJLMaster" %>
 
 <%@ Register src="../UserControls/Header.ascx" tagname="Header" tagprefix="uc1" %>
-<%@ Register src="../UserControls/Footer.ascx" tagname="Footer" tagprefix="uc2" %>
 
 <!DOCTYPE html PUBLIC "-//W3C//DTD XHTML 1.0 Transitional//EN" "http://www.w3.org/TR/xhtml1/DTD/xhtml1-transitional.dtd">
 
@@ -20,8 +19,7 @@
         <asp:ContentPlaceHolder ID="content" runat="server">
         
         </asp:ContentPlaceHolder>    </div>
-        <div><uc2:Footer ID="Footer1" runat="server" />
-    </div>
+        
     </form>    
     </div>
 </body>

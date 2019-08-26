@@ -37,6 +37,10 @@
             return true;
         }
     </script>
+    <style type="text/css">
+        .gridview {
+        }
+    </style>
 </asp:Content>
 <asp:Content ID="Content2" ContentPlaceHolderID="ContentPlaceHolder1" runat="server">
     <h3>系统用户管理</h3>
@@ -44,16 +48,19 @@
         <%--用户信息显示区域--%>
         <asp:GridView ID="GridView1" runat="server" AutoGenerateColumns="False"
             DataKeyNames="ID"
-            CssClass="gridview" OnRowCommand="GridView1_RowCommand">
+            CssClass="gridview" OnRowCommand="GridView1_RowCommand" Width="869px">
             <Columns>
                 <asp:BoundField DataField="ID" HeaderText="用户编码">
-                    <HeaderStyle Width="100px" />
+                    <HeaderStyle Width="150px" />
+                    <ItemStyle HorizontalAlign="Center" />
                 </asp:BoundField>
                 <asp:BoundField DataField="UserName" HeaderText="用户名称">
-                    <HeaderStyle Width="120px" />
+                    <HeaderStyle Width="200px" />
+                    <ItemStyle HorizontalAlign="Center" />
                 </asp:BoundField>
                 <asp:BoundField DataField="Department" HeaderText="用户部门">
-                    <HeaderStyle Width="120px" />
+                    <HeaderStyle Width="200px" />
+                    <ItemStyle HorizontalAlign="Center" />
                 </asp:BoundField>
                 <asp:BoundField DataField="Password" HeaderText="密码" Visible="False" />
 
@@ -61,16 +68,24 @@
                     <ItemTemplate>
                         <%#Eval("UserRole.Name")%>
                     </ItemTemplate>
+                    <ItemStyle HorizontalAlign="Center" />
                 </asp:TemplateField>
                 <asp:TemplateField HeaderText="编辑"><%--模板列，以图形方式显示编辑按钮--%>
                     <ItemTemplate>
                         <asp:ImageButton runat="server" CommandName="edit0" CommandArgument='<%#Eval("id") %>' ImageUrl="../images/edit.png" />
+                       
                     </ItemTemplate>
+
+                    <ItemStyle HorizontalAlign="Center" />
+
                 </asp:TemplateField>
                 <asp:TemplateField HeaderText="删除"><%--模板列，以图形方式显示删除按钮--%>
                     <ItemTemplate>
+
                         <asp:ImageButton runat="server" CommandName="delete0" OnClientClick="return confirmDelete();" CommandArgument='<%#Eval("id") %>' ImageUrl="../images/delete.png" />
+                        
                     </ItemTemplate>
+                    <Itemstyle horizontalalign="Center" />
                 </asp:TemplateField>
             </Columns>
         </asp:GridView>

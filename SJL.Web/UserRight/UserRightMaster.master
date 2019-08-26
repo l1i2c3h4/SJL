@@ -1,17 +1,57 @@
 ﻿<%@ Master Language="C#" MasterPageFile="~/Default/SJLMaster.Master" AutoEventWireup="true" CodeBehind="UserRightMaster.master.cs" Inherits="SJL.Web.UserRight.UserRightMaster" %>
+
 <asp:Content ID="Content1" ContentPlaceHolderID="head" runat="server">
     <asp:ContentPlaceHolder ID="head" runat="server"></asp:ContentPlaceHolder>
 </asp:Content>
 <asp:Content ID="Content2" ContentPlaceHolderID="content" runat="server">
-    <div id="leftNav">
 
-<a href="manageuser.aspx">系统用户管理</a><br /><hr />
-<a href="UserRolePage.aspx">用户角色管理</a><br /><hr />
-<a href="ModulePage.aspx">功能模块管理</a><br /><hr />
-<a href="RoleRightPage.aspx">角色权限管理</a><br /><hr /> 
-<a href="ChangePassPage.aspx">修改密码</a><br /><hr /> 
-</div>
-<div id="rightContent">
-<asp:ContentPlaceHolder ID="ContentPlaceHolder1" runat="server"></asp:ContentPlaceHolder>
-</div>
+    <table align="center" cellpadding="0" cellspacing="0" width="100%" id="Table5">
+        <tbody>
+            <tr>
+                <td class="MainBodyLeft"></td>
+                <td style="width: 100px; vertical-align: top">
+                    <div id="Theme" style="height: 12px; text-align: center;">
+                    </div>
+                    <div id="Div1" style="height: 15px; text-align: left; padding-left: 8px;">
+                        <span id="lblWelcome">欢迎</span>
+                    </div>
+                    <table align="center" cellpadding="0" cellspacing="0" width="100%" id="left_bar_table">
+                        <tbody>
+                            <tr class="Menu_Module_MyBox" style="cursor: default;">
+                                <td><a href="./manageuser.aspx">系统用户管理</a>
+                                </td>
+                            </tr>
+                            <tr class="Menu_Module_MyBox" style="cursor: default;">
+                                <td><a href=""><a href="./UserRolePage.aspx">用户角色管理</a></a>
+                                </td>
+                            </tr>
+                            <tr class="Menu_Module_MyBox" style="cursor: default;">
+                                <td><a href=""><a href="./ModulePage.aspx">功能模块管理</a></a>
+                                </td>
+                            </tr>
+                            <tr class="Menu_Module_MyBox" style="cursor: default;">
+                                <td><a href=""><a href="./RoleRightPage.aspx">角色权限管理</a></a>
+                                </td>
+                            </tr>
+                            <tr class="Menu_Module_MyBox" style="cursor: default;">
+                                <td><a href=""><a href="./ChangePassPage.aspx">修改密码</a></a>
+                                </td>
+                            </tr>
+                            <tr class="Menu_Module_MyBox" style="cursor: default;">
+                                <td><a href=""><a href="../Default/Default.aspx">返回</a></a>
+                                </td>
+                            </tr>
+                            <!--<tr class="Menu_Footer">
+                                    <td></td>
+                                </tr>-->
+                        </tbody>
+                    </table>
+
+                </td>
+                <td valign="top">
+                    <asp:ContentPlaceHolder ID="ContentPlaceHolder1" runat="server"></asp:ContentPlaceHolder>
+                </td>
+            </tr>
+        </tbody>
+    </table>
 </asp:Content>

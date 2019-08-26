@@ -1,9 +1,12 @@
 ﻿<%@ Control Language="C#" AutoEventWireup="true" CodeBehind="Header.ascx.cs" Inherits="SJL.Web.UserControls.Header" %>
-<div style="background:#f2f2fe; width:1000px; text-align:left;"><div style="float:left">
-&nbsp;<span style="margin-left:180px; margin-right:30px;">当前日期：<%=DateTime.Now.ToLongDateString()+"&nbsp;"+DateTime.Today.DayOfWeek %></span>
-</div>
-   
-</div>
-<div id="NavMenu">
-     
+<link href="../css/htmlNew.css" type="text/css" rel="stylesheet">
+
+<div>
+    <table id="Table8" border="0" width="100%" align="center" cellpadding="1" cellspacing="0">
+	<tbody><tr class="TopBarRow">
+		<td class="TopBarLeft"></td>
+		<td class="TopBarMiddle"></td>
+		<td class="TopBarRight"></td>
+	</tr>
+</tbody></table>
 </div>

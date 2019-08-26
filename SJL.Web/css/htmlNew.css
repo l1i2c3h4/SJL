@@ -115,7 +115,8 @@ a
     padding-left:13px;
 }
 .TopBarLeft {
-    background-image: url( '../images/TopLeft2_Flower1.gif' );
+    width: 302px;
+    background-image: url( '../images/TopLeft2_Flower.gif' );
 }
 .TopBarRow
 {
