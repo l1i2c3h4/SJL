@@ -207,13 +207,6 @@
     <Compile Include="耗材申领\审批进度查询.aspx.designer.cs">
       <DependentUpon>审批进度查询.aspx</DependentUpon>
     </Compile>
-    <Compile Include="耗材申领\耗材审批.aspx.cs">
-      <DependentUpon>耗材审批.aspx</DependentUpon>
-      <SubType>ASPXCodeBehind</SubType>
-    </Compile>
-    <Compile Include="耗材申领\耗材审批.aspx.designer.cs">
-      <DependentUpon>耗材审批.aspx</DependentUpon>
-    </Compile>
     <Compile Include="耗材申领\耗材申请.aspx.cs">
       <DependentUpon>耗材申请.aspx</DependentUpon>
       <SubType>ASPXCodeBehind</SubType>
@@ -274,7 +267,6 @@
       <DependentUpon>Web.config</DependentUpon>
     </Content>
     <Content Include="耗材申领\审批进度查询.aspx" />
-    <Content Include="耗材申领\耗材审批.aspx" />
     <Content Include="耗材申领\耗材申请.aspx" />
     <Content Include="耗材申领\耗材申领母版页.Master" />
   </ItemGroup>
