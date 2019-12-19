@@ -17,12 +17,19 @@
                         </div>
                         <table align="center" cellpadding="0" cellspacing="0" width="100%" id="left_bar_table">
                             <tbody>
-                                <tr class="Menu_Module_MyBox" style="cursor: default;">
-                                    <td><a href="./耗材申请.aspx">耗材申请</a>
+                                <tr class="Menu_Module_MyBox" style="cursor: default;"> 
                                     </td>
                                 </tr>
                                  <tr class="Menu_Module_MyBox" style="cursor: default;">
-                                    <td><a href=""><a href="./耗材审批.aspx">耗材审批</a></a>
+                                    <td><a href=""><a href="./申请部门领导审批.aspx">申请部门领导审批</a></a>
+                                    </td>
+                                </tr>
+                                <tr class="Menu_Module_MyBox" style="cursor: default;">
+                                    <td><a href=""><a href="./信息工程部管理员审批.aspx">信息工程部管理员审批</a></a>
+                                    </td>
+                                </tr>
+                                <tr class="Menu_Module_MyBox" style="cursor: default;">
+                                    <td><a href=""><a href="./信息工程部领导审批.aspx">信息工程部领导审批</a></a>
                                     </td>
                                 </tr>
                                 <tr class="Menu_Module_MyBox" style="cursor: default;">
