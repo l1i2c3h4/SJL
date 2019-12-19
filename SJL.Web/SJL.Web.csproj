@@ -89,7 +89,6 @@
     <Content Include="js\jquery-1.3.2-vsdoc.js" />
     <Content Include="js\jquery-1.3.2.js" />
     <Content Include="Login.aspx" />
-    <Content Include="测试.aspx" />
     <Content Include="登陆.aspx" />
   </ItemGroup>
   <ItemGroup>
@@ -186,13 +185,6 @@
     <Compile Include="UserRight\UserRolePage.aspx.designer.cs">
       <DependentUpon>UserRolePage.aspx</DependentUpon>
     </Compile>
-    <Compile Include="测试.aspx.cs">
-      <DependentUpon>测试.aspx</DependentUpon>
-      <SubType>ASPXCodeBehind</SubType>
-    </Compile>
-    <Compile Include="测试.aspx.designer.cs">
-      <DependentUpon>测试.aspx</DependentUpon>
-    </Compile>
     <Compile Include="登陆.aspx.cs">
       <DependentUpon>登陆.aspx</DependentUpon>
       <SubType>ASPXCodeBehind</SubType>
@@ -200,6 +192,7 @@
     <Compile Include="登陆.aspx.designer.cs">
       <DependentUpon>登陆.aspx</DependentUpon>
     </Compile>
+    <Compile Include="耗材申领\Class1.cs" />
     <Compile Include="耗材申领\审批进度查询.aspx.cs">
       <DependentUpon>审批进度查询.aspx</DependentUpon>
       <SubType>ASPXCodeBehind</SubType>

@@ -2,25 +2,36 @@
 
 <asp:Content ID="Content1" ContentPlaceHolderID="head" runat="server">
     <asp:ContentPlaceHolder ID="head" runat="server"></asp:ContentPlaceHolder>
+    <style type="text/css">
+        .auto-style1 {
+            width: 125%;
+        }
+        .auto-style2 {
+            width: 145px;
+        }
+        .auto-style4 {
+            height: 15px;
+            width: 209px;
+        }
+    </style>
 </asp:Content>
 <asp:Content ID="Content2" ContentPlaceHolderID="content" runat="server">
     <div>
-         <table align="center" cellpadding="0" cellspacing="0" width="100%" id="Table5">
+        <table align="center" cellpadding="0" cellspacing="0" width="100%" id="Table5">
             <tbody>
                 <tr>
                     <td class="MainBodyLeft"></td>
-                    <td style="width: 100px; vertical-align: top">
-                        <div id="Theme" style="height: 12px; text-align: center;">
-                        </div>
-                        <div id="Div1" style="height: 15px; text-align: left; padding-left: 8px;">
+                    <td style="vertical-align: top" class="auto-style2">
+                        <div id="Div1" style="text-align: left; padding-left: 8px;" class="auto-style4">
                             <span id="lblWelcome">欢迎</span>
                         </div>
-                        <table align="center" cellpadding="0" cellspacing="0" width="100%" id="left_bar_table">
+                        <table align="center" cellpadding="0" cellspacing="0" id="left_bar_table" class="auto-style1">
                             <tbody>
-                                <tr class="Menu_Module_MyBox" style="cursor: default;"> 
+                                <tr class="Menu_Module_MyBox" style="cursor: default;">
+                                    <td><a href=""><a href="./耗材申请.aspx">耗材申请</a></a>
                                     </td>
                                 </tr>
-                                 <tr class="Menu_Module_MyBox" style="cursor: default;">
+                                <tr class="Menu_Module_MyBox" style="cursor: default;">
                                     <td><a href=""><a href="./申请部门领导审批.aspx">申请部门领导审批</a></a>
                                     </td>
                                 </tr>
@@ -29,7 +40,7 @@
                                     </td>
                                 </tr>
                                 <tr class="Menu_Module_MyBox" style="cursor: default;">
-                                    <td><a href=""><a href="./信息工程部领导审批.aspx">信息工程部领导耗材审批</a></a>
+                                    <td><a href=""><a href="./信息工程部领导审批.aspx">信息工程部领导审批</a></a>
                                     </td>
                                 </tr>
                                 <tr class="Menu_Module_MyBox" style="cursor: default;">
@@ -48,11 +59,12 @@
 
                     </td>
                     <td valign="top">
-                    <asp:ContentPlaceHolder ID="ContentPlaceHolder1" runat="server"></asp:ContentPlaceHolder>
-                </td>
+                        <asp:ContentPlaceHolder ID="ContentPlaceHolder1" runat="server">
+                        </asp:ContentPlaceHolder>
+                    </td>
                 </tr>
             </tbody>
         </table>
-</div>
+    </div>
 
 </asp:Content>
