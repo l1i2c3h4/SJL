@@ -76,6 +76,7 @@
     <Content Include="css\main.css" />
     <Content Include="css\reset.css" />
     <Content Include="css\tabbox_v5.css" />
+    <Content Include="HCapply\HCapplication.aspx" />
     <Content Include="images\background.jpg" />
     <Content Include="images\build.jpg" />
     <Content Include="images\finger.png" />
@@ -98,6 +99,20 @@
     </Compile>
     <Compile Include="Default\Default.aspx.designer.cs">
       <DependentUpon>Default.aspx</DependentUpon>
+    </Compile>
+    <Compile Include="HCapply\HCapplication.aspx.cs">
+      <DependentUpon>HCapplication.aspx</DependentUpon>
+      <SubType>ASPXCodeBehind</SubType>
+    </Compile>
+    <Compile Include="HCapply\HCapplication.aspx.designer.cs">
+      <DependentUpon>HCapplication.aspx</DependentUpon>
+    </Compile>
+    <Compile Include="HCapply\HCmain.master.cs">
+      <DependentUpon>HCmain.master</DependentUpon>
+      <SubType>ASPXCodeBehind</SubType>
+    </Compile>
+    <Compile Include="HCapply\HCmain.master.designer.cs">
+      <DependentUpon>HCmain.master</DependentUpon>
     </Compile>
     <Compile Include="HttpCode\AdminTool.cs" />
     <Compile Include="HttpCode\CheckUserModule.cs" />
@@ -192,28 +207,7 @@
     <Compile Include="登陆.aspx.designer.cs">
       <DependentUpon>登陆.aspx</DependentUpon>
     </Compile>
-    <Compile Include="耗材申领\Class1.cs" />
-    <Compile Include="耗材申领\审批进度查询.aspx.cs">
-      <DependentUpon>审批进度查询.aspx</DependentUpon>
-      <SubType>ASPXCodeBehind</SubType>
-    </Compile>
-    <Compile Include="耗材申领\审批进度查询.aspx.designer.cs">
-      <DependentUpon>审批进度查询.aspx</DependentUpon>
-    </Compile>
-    <Compile Include="耗材申领\耗材申请.aspx.cs">
-      <DependentUpon>耗材申请.aspx</DependentUpon>
-      <SubType>ASPXCodeBehind</SubType>
-    </Compile>
-    <Compile Include="耗材申领\耗材申请.aspx.designer.cs">
-      <DependentUpon>耗材申请.aspx</DependentUpon>
-    </Compile>
-    <Compile Include="耗材申领\耗材申领母版页.Master.cs">
-      <DependentUpon>耗材申领母版页.Master</DependentUpon>
-      <SubType>ASPXCodeBehind</SubType>
-    </Compile>
-    <Compile Include="耗材申领\耗材申领母版页.Master.designer.cs">
-      <DependentUpon>耗材申领母版页.Master</DependentUpon>
-    </Compile>
+    <Compile Include="HCapply\Class1.cs" />
   </ItemGroup>
   <ItemGroup>
     <Content Include="css\login.css" />
@@ -246,6 +240,7 @@
     <Content Include="UserRight\ModulePage.aspx" />
     <Content Include="UserRight\RoleRightPage.aspx" />
     <Content Include="UserRight\UserRolePage.aspx" />
+    <Content Include="HCapply\HCmain.master" />
     <None Include="packages.config" />
     <None Include="Properties\Settings.settings">
       <Generator>SettingsSingleFileGenerator</Generator>
@@ -259,9 +254,6 @@
     <Content Include="Web.Release.config">
       <DependentUpon>Web.config</DependentUpon>
     </Content>
-    <Content Include="耗材申领\审批进度查询.aspx" />
-    <Content Include="耗材申领\耗材申请.aspx" />
-    <Content Include="耗材申领\耗材申领母版页.Master" />
   </ItemGroup>
   <ItemGroup>
     <WCFMetadata Include="Service References\" />

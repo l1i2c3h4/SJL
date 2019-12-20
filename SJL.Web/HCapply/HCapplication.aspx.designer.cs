@@ -7,10 +7,10 @@
 // </自动生成>
 //------------------------------------------------------------------------------
 
-namespace NrcmWeb.耗材申领 {
+namespace NrcmWeb.HCapply {
     
     
-    public partial class 耗材申请 {
+    public partial class HCapplication {
         
         /// <summary>
         /// SQR 控件。

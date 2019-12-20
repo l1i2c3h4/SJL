@@ -1,4 +1,4 @@
-﻿<%@ Page Title="" Language="C#" MasterPageFile="~/耗材申领/耗材申领母版页.Master" AutoEventWireup="true" CodeBehind="耗材申请.aspx.cs" Inherits="NrcmWeb.耗材申领.耗材申请" %>
+﻿<%@ Page Title="" Language="C#" MasterPageFile="~/HCapply/HCmain.master" AutoEventWireup="true" CodeBehind="HCapplication.aspx.cs" Inherits="NrcmWeb.HCapply.HCapplication" %>
 
 <asp:Content ID="Content1" ContentPlaceHolderID="head" runat="server">
 </asp:Content>
@@ -60,10 +60,10 @@
 
         <asp:GridView ID="GridView1" runat="server" AutoGenerateColumns="False" Width="705px" Height="85px">
             <Columns>
-                <asp:BoundField HeaderText="申请部门" DataField="SQBM" >
-                <ItemStyle HorizontalAlign="Center" />
+                <asp:BoundField HeaderText="申请部门" DataField="SQBM">
+                    <ItemStyle HorizontalAlign="Center" />
                 </asp:BoundField>
-                <asp:BoundField HeaderText="申请科室" DataField="SQKS" >
+                <asp:BoundField HeaderText="申请科室" DataField="SQKS">
                     <ItemStyle HorizontalAlign="Center" />
                 </asp:BoundField>
                 <asp:BoundField HeaderText="打印机型号" DataField="DYJXH">
@@ -75,7 +75,7 @@
                 <asp:BoundField HeaderText="数量" DataField="SL">
                     <ItemStyle HorizontalAlign="Center" />
                 </asp:BoundField>
-            </Columns> 
+            </Columns>
         </asp:GridView>
         <br />
         <br />
@@ -89,5 +89,4 @@
         </table>
 
     </div>
-
 </asp:Content>

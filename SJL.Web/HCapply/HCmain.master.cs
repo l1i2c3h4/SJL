@@ -5,9 +5,9 @@ using System.Web;
 using System.Web.UI;
 using System.Web.UI.WebControls;
 
-namespace NrcmWeb.耗材申领
+namespace NrcmWeb.HCapply
 {
-    public partial class 耗材申领母版页 : System.Web.UI.MasterPage
+    public partial class HCmain1 : System.Web.UI.MasterPage
     {
         protected void Page_Load(object sender, EventArgs e)
         {
