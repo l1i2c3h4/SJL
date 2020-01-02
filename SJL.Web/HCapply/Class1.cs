@@ -3,7 +3,7 @@ using System.Collections.Generic;
 using System.Linq;
 using System.Web;
 
-namespace NrcmWeb.耗材申领
+namespace NrcmWeb.HCapply
 {
     public class Class1
     {
