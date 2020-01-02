@@ -27,27 +27,27 @@
                         <table align="center" cellpadding="0" cellspacing="0" id="left_bar_table" class="auto-style1">
                             <tbody>
                                 <tr class="Menu_Module_MyBox" style="cursor: default;">
-                                    <td><a href=""><a href="./耗材申请.aspx">耗材申请</a></a>
+                                    <td><a href="./HCapplication.aspx">耗材申请</a>
                                     </td>
                                 </tr>
                                 <tr class="Menu_Module_MyBox" style="cursor: default;">
-                                    <td><a href=""><a href="./申请部门领导审批.aspx">申请部门领导审批</a></a>
+                                    <td><a href="./SQBMApprove.aspx">申请部门领导审批</a>
                                     </td>
                                 </tr>
                                 <tr class="Menu_Module_MyBox" style="cursor: default;">
-                                    <td><a href=""><a href="./信息工程部管理员审批.aspx">信息工程部管理员审批</a></a>
+                                    <td><a href="./XXGLYApprove.aspx">信息工程部管理员审批</a>
                                     </td>
                                 </tr>
                                 <tr class="Menu_Module_MyBox" style="cursor: default;">
-                                    <td><a href=""><a href="./信息工程部领导审批.aspx">信息工程部领导审批</a></a>
+                                    <td><a href="">信息工程部领导审批</a>
                                     </td>
                                 </tr>
                                 <tr class="Menu_Module_MyBox" style="cursor: default;">
-                                    <td><a href=""><a href="./审批进度查询.aspx">审批进度查询</a></a>
+                                    <td><a href="">审批进度查询</a>
                                     </td>
                                 </tr>
                                 <tr class="Menu_Module_MyBox" style="cursor: default;">
-                                    <td><a href=""><a href="../Default/Default.aspx">返回</a></a>
+                                    <td><a href="../Default/Default.aspx">返回</a>
                                     </td>
                                 </tr>
                                 <!--<tr class="Menu_Footer">

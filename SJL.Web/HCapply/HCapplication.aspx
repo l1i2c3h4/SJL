@@ -58,8 +58,11 @@
         <br />
         <br />
 
-        <asp:GridView ID="GridView1" runat="server" AutoGenerateColumns="False" Width="705px" Height="85px">
+        <asp:GridView ID="GridView1" runat="server" AutoGenerateColumns="False" Width="705px" Height="85px" DataKeyNames="SQXID" OnRowDeleting="GridView1_RowDeleting">
             <Columns>
+                <asp:BoundField HeaderText="申请项ID" DataField="SQXID" Visible="false">
+                    <ItemStyle HorizontalAlign="Center" />
+                </asp:BoundField>
                 <asp:BoundField HeaderText="申请部门" DataField="SQBM">
                     <ItemStyle HorizontalAlign="Center" />
                 </asp:BoundField>
@@ -75,6 +78,9 @@
                 <asp:BoundField HeaderText="数量" DataField="SL">
                     <ItemStyle HorizontalAlign="Center" />
                 </asp:BoundField>
+                <asp:CommandField HeaderText="删除" ShowDeleteButton="True" ShowHeader="True" >
+                     <ItemStyle HorizontalAlign="Center" />
+                    </asp:CommandField>
             </Columns>
         </asp:GridView>
         <br />

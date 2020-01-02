@@ -7,6 +7,7 @@ namespace NrcmWeb.HCapply
 {
     public class Class1
     {
+        public string SQXID { get; set; }
         public string SQBM { get; set; }
         public string SQKS { get; set; }
         public string DYJXH { get; set; }

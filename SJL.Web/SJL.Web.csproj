@@ -77,6 +77,9 @@
     <Content Include="css\reset.css" />
     <Content Include="css\tabbox_v5.css" />
     <Content Include="HCapply\HCapplication.aspx" />
+    <Content Include="HCapply\SQBM.aspx" />
+    <Content Include="HCapply\SQBMApprove.aspx" />
+    <Content Include="HCapply\XXGLYApprove.aspx" />
     <Content Include="images\background.jpg" />
     <Content Include="images\build.jpg" />
     <Content Include="images\finger.png" />
@@ -100,6 +103,7 @@
     <Compile Include="Default\Default.aspx.designer.cs">
       <DependentUpon>Default.aspx</DependentUpon>
     </Compile>
+    <Compile Include="HCapply\Class2.cs" />
     <Compile Include="HCapply\HCapplication.aspx.cs">
       <DependentUpon>HCapplication.aspx</DependentUpon>
       <SubType>ASPXCodeBehind</SubType>
@@ -113,6 +117,27 @@
     </Compile>
     <Compile Include="HCapply\HCmain.master.designer.cs">
       <DependentUpon>HCmain.master</DependentUpon>
+    </Compile>
+    <Compile Include="HCapply\SQBM.aspx.cs">
+      <DependentUpon>SQBM.aspx</DependentUpon>
+      <SubType>ASPXCodeBehind</SubType>
+    </Compile>
+    <Compile Include="HCapply\SQBM.aspx.designer.cs">
+      <DependentUpon>SQBM.aspx</DependentUpon>
+    </Compile>
+    <Compile Include="HCapply\SQBMApprove.aspx.cs">
+      <DependentUpon>SQBMApprove.aspx</DependentUpon>
+      <SubType>ASPXCodeBehind</SubType>
+    </Compile>
+    <Compile Include="HCapply\SQBMApprove.aspx.designer.cs">
+      <DependentUpon>SQBMApprove.aspx</DependentUpon>
+    </Compile>
+    <Compile Include="HCapply\XXGLYApprove.aspx.cs">
+      <DependentUpon>XXGLYApprove.aspx</DependentUpon>
+      <SubType>ASPXCodeBehind</SubType>
+    </Compile>
+    <Compile Include="HCapply\XXGLYApprove.aspx.designer.cs">
+      <DependentUpon>XXGLYApprove.aspx</DependentUpon>
     </Compile>
     <Compile Include="HttpCode\AdminTool.cs" />
     <Compile Include="HttpCode\CheckUserModule.cs" />

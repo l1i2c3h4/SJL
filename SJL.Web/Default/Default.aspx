@@ -17,7 +17,7 @@
                         <table align="center" cellpadding="0" cellspacing="0" width="100%" id="left_bar_table">
                             <tbody>
                                 <tr class="Menu_Module_MyBox" style="cursor: default;">
-                                    <td><a href="../耗材申领/耗材申请.aspx">耗材管理系统</a>
+                                    <td><a href="../HCapply/HCapplication.aspx">耗材管理系统</a>
                                     </td>
                                 </tr>
                                  <tr class="Menu_Module_MyBox" style="cursor: default;">
