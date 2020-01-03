@@ -79,7 +79,10 @@
     <Content Include="HCapply\HCapplication.aspx" />
     <Content Include="HCapply\SQBM.aspx" />
     <Content Include="HCapply\SQBMApprove.aspx" />
+    <Content Include="HCapply\XXGLY.aspx" />
     <Content Include="HCapply\XXGLYApprove.aspx" />
+    <Content Include="HCapply\XXLD.aspx" />
+    <Content Include="HCapply\XXLDApprove.aspx" />
     <Content Include="images\background.jpg" />
     <Content Include="images\build.jpg" />
     <Content Include="images\finger.png" />
@@ -132,12 +135,33 @@
     <Compile Include="HCapply\SQBMApprove.aspx.designer.cs">
       <DependentUpon>SQBMApprove.aspx</DependentUpon>
     </Compile>
+    <Compile Include="HCapply\XXGLY.aspx.cs">
+      <DependentUpon>XXGLY.aspx</DependentUpon>
+      <SubType>ASPXCodeBehind</SubType>
+    </Compile>
+    <Compile Include="HCapply\XXGLY.aspx.designer.cs">
+      <DependentUpon>XXGLY.aspx</DependentUpon>
+    </Compile>
     <Compile Include="HCapply\XXGLYApprove.aspx.cs">
       <DependentUpon>XXGLYApprove.aspx</DependentUpon>
       <SubType>ASPXCodeBehind</SubType>
     </Compile>
     <Compile Include="HCapply\XXGLYApprove.aspx.designer.cs">
       <DependentUpon>XXGLYApprove.aspx</DependentUpon>
+    </Compile>
+    <Compile Include="HCapply\XXLD.aspx.cs">
+      <DependentUpon>XXLD.aspx</DependentUpon>
+      <SubType>ASPXCodeBehind</SubType>
+    </Compile>
+    <Compile Include="HCapply\XXLD.aspx.designer.cs">
+      <DependentUpon>XXLD.aspx</DependentUpon>
+    </Compile>
+    <Compile Include="HCapply\XXLDApprove.aspx.cs">
+      <DependentUpon>XXLDApprove.aspx</DependentUpon>
+      <SubType>ASPXCodeBehind</SubType>
+    </Compile>
+    <Compile Include="HCapply\XXLDApprove.aspx.designer.cs">
+      <DependentUpon>XXLDApprove.aspx</DependentUpon>
     </Compile>
     <Compile Include="HttpCode\AdminTool.cs" />
     <Compile Include="HttpCode\CheckUserModule.cs" />

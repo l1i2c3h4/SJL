@@ -11,7 +11,7 @@ namespace NrcmWeb.HCapply
 {
 
 
-    public partial class SQBM
+    public partial class XXGLY
     {
 
         /// <summary>
