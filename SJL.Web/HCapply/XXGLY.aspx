@@ -10,7 +10,7 @@
 <body>
     <form id="form1" runat="server">
         <div>
-            <h3>耗材申领表</h3>
+            <h3>信息管理员审批</h3>
 
             <table width="606" height="59" border="0" cellpadding="5" cellspacing="5">
                 <tbody>
