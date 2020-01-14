@@ -51,7 +51,7 @@
                 <td>
                     <asp:TextBox ID="SL" runat="server"></asp:TextBox></td>
                 <td>
-                    <asp:Button ID="addHC" runat="server" Text="添加耗材" />
+                    <asp:Button ID="addHC" runat="server" Text="添加耗材" OnClick="addHC_Click" />
                 </td>
             </tr>
         </table>

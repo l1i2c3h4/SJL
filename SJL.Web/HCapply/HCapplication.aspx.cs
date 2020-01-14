@@ -14,42 +14,59 @@ namespace NrcmWeb.HCapply
         {
             if (!IsPostBack)
             {
-                Bind();
+                bindData();
             }
 
 
 
         }
 
-        public void Bind()
+        public void bindData()
         {
-            List<Class1> test1 = new List<Class1>();
-            Class1 cl = new Class1();
-            cl.SQXID = "1";
-            cl.SQBM = "信息工程部";
-            cl.DYJXH = "联想7450";
-            cl.HCLX = "硒鼓";
-            cl.SL = "1";
-            cl.SQKS = "南宁运维室";
-            test1.Add(cl);
-
-            DataTable table = new DataTable("测试表");
-            table.Columns.Add("SQXID", typeof(string));
-            table.Columns.Add("SQBM", typeof(string));
-            table.Columns.Add("SQKS", typeof(string));
-            table.Columns.Add("DYJXH", typeof(string));
-            table.Columns.Add("HCLX", typeof(string));
-            table.Columns.Add("SL", typeof(string));
-            table.Rows.Add(new object[] { "1","信息工程部", "南宁运维室", "联想7450", "硒鼓", "5" });
-
-            GridView1.DataSource = test1;
+            if (Session["haocai"] == null)
+                return;
+            HaoCaiItem haoCaiItem = Session["haocai"] as HaoCaiItem;
+            GridView1.DataSource = (Session["haocai"] as HaoCaiItem).HaoCaiInItem;
             GridView1.DataBind();
+
+
+            //List<Class1> test1 = new List<Class1>();
+            //Class1 cl = new Class1();
+            //cl.SQXID = "1";
+            //cl.SQBM = "信息工程部";
+            //cl.DYJXH = "联想7450";
+            //cl.HCLX = "硒鼓";
+            //cl.SL = "1";
+            //cl.SQKS = "南宁运维室";
+            //test1.Add(cl);
+
+            //DataTable table = new DataTable("测试表");
+            //table.Columns.Add("SQXID", typeof(string));
+            //table.Columns.Add("SQBM", typeof(string));
+            //table.Columns.Add("SQKS", typeof(string));
+            //table.Columns.Add("DYJXH", typeof(string));
+            //table.Columns.Add("HCLX", typeof(string));
+            //table.Columns.Add("SL", typeof(string));
+            //table.Rows.Add(new object[] { "1", "信息工程部", "南宁运维室", "联想7450", "硒鼓", "5" });
+
+            //GridView1.DataSource = test1;
+            //GridView1.DataBind();
 
         }
 
         protected void GridView1_RowDeleting(object sender, GridViewDeleteEventArgs e)
         {
 
+        }
+
+        protected void addHC_Click(object sender, EventArgs e)
+        {
+            if (Session["ID"] == null)
+                Session["ID"] = 1;
+            else
+            {
+                int ID = Session["ID"];
+            }
         }
     }
 }

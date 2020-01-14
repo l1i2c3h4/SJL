@@ -107,6 +107,7 @@
       <DependentUpon>Default.aspx</DependentUpon>
     </Compile>
     <Compile Include="HCapply\Class2.cs" />
+    <Compile Include="HCapply\HaoCaiItem.cs" />
     <Compile Include="HCapply\HCapplication.aspx.cs">
       <DependentUpon>HCapplication.aspx</DependentUpon>
       <SubType>ASPXCodeBehind</SubType>
