@@ -257,7 +257,6 @@
     <Compile Include="登陆.aspx.designer.cs">
       <DependentUpon>登陆.aspx</DependentUpon>
     </Compile>
-    <Compile Include="HCapply\Class1.cs" />
   </ItemGroup>
   <ItemGroup>
     <Content Include="css\login.css" />

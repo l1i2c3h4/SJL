@@ -56,27 +56,46 @@ namespace NrcmWeb.HCapply
 
         protected void GridView1_RowDeleting(object sender, GridViewDeleteEventArgs e)
         {
+            HaoCaiItem haoCaiItem = Session["haocai"] as HaoCaiItem;
+            List<HaoCaiItem> lists = (Session["haocai"] as HaoCaiItem).HaoCaiInItem;
+            for (int i=0;i< lists.Count;i++)
+            {
+                if (lists[i].SQXID == Convert.ToInt32(e.Keys[0].ToString()))
+                {
+                    lists.Remove(lists[i]);
+                }
+                
+            }
+
+            bindData();
 
         }
 
         protected void addHC_Click(object sender, EventArgs e)
         {
-            int SQXID;
+            int sqxid;
             if (Session["ID"] == null)
             {
-                SQXID = 1;
+                sqxid = 1;
             }
                
             else
             {
-                SQXID = Convert.ToInt32(Session["ID"]) + 1;
+                sqxid = Convert.ToInt32(Session["ID"]) + 1;
             }
-            Session["ID"] = SQXID;
+            Session["ID"] = sqxid;
 
             string sqbm = SQBM.Text;
             string sqks = SQKS.Text;
             string dyjxh = DYJXH.Text;
-            string 
+            string hclx = HCLX.Text;
+            string sl = SL.Text;
+
+            if (Session["haocai"] == null)
+                Session["haocai"] = new HaoCaiItem();
+            HaoCaiItem haoCaiItem = Session["haocai"] as HaoCaiItem;
+            haoCaiItem.addHaoCai(sqxid, sqbm, sqks, dyjxh, hclx, sl);
+            bindData();
 
         }
     }

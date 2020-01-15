@@ -15,7 +15,11 @@
                     </td>
                     <td>归属地：</td>
                     <td>
-                        <asp:TextBox ID="GSD" runat="server"></asp:TextBox></td>
+                        <asp:DropDownList ID="GSD" runat="server" Height="25px" Width="153px">
+                            <asp:ListItem Selected="True"> 南宁</asp:ListItem>
+                            <asp:ListItem>桂林</asp:ListItem>
+                        </asp:DropDownList>
+                        </td>
                 </tr>
                 <tr>
                     <td>联系电话：</td>
@@ -58,7 +62,7 @@
         <br />
         <br />
 
-        <asp:GridView ID="GridView1" runat="server" AutoGenerateColumns="False" Width="705px" Height="85px" DataKeyNames="SQXID" OnRowDeleting="GridView1_RowDeleting">
+        <asp:GridView ID="GridView1" runat="server" EmptyDataText="数据为空" AutoGenerateColumns="False" Width="705px" Height="85px" DataKeyNames="SQXID" OnRowDeleting="GridView1_RowDeleting">
             <Columns>
                 <asp:BoundField HeaderText="申请项ID" DataField="SQXID" Visible="false">
                     <ItemStyle HorizontalAlign="Center" />

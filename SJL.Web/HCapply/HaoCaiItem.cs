@@ -8,7 +8,7 @@ namespace NrcmWeb.HCapply
     public class HaoCaiItem
     {
         public HaoCaiItem() { }
-        public string SQXID { get; set; }
+        public int SQXID { get; set; }
         public string SQBM { get; set; }
         public string SQKS { get; set; }
         public string DYJXH { get; set; }
@@ -25,18 +25,20 @@ namespace NrcmWeb.HCapply
             }
         }
 
-        public void addHaoCai(string SQXID, string SQBM, string SQKS,string DYJXH,string HCLX,string SL)
+        public void addHaoCai(int SQXID, string SQBM, string SQKS,string DYJXH,string HCLX,string SL)
         {
 
-            HaoCaiItem HaoCai = new HaoCaiItem();
-            HaoCai.SQXID = SQXID;
-            HaoCai.SQBM = SQBM;
-            HaoCai.SQKS = SQKS;
-            HaoCai.DYJXH = DYJXH;
-            HaoCai.HCLX = HCLX;
-            HaoCai.SL = SL;
+            HaoCaiItem HaoCai = new HaoCaiItem
+            {
+                SQXID = SQXID,
+                SQBM = SQBM,
+                SQKS = SQKS,
+                DYJXH = DYJXH,
+                HCLX = HCLX,
+                SL = SL
+            };
 
-            if(HaoCai != null)
+            if (HaoCai != null)
             {
                 Items.Add(HaoCai);
             }

@@ -7,11 +7,13 @@
 // </自动生成>
 //------------------------------------------------------------------------------
 
-namespace NrcmWeb.HCapply {
-    
-    
-    public partial class HCapplication {
-        
+namespace NrcmWeb.HCapply
+{
+
+
+    public partial class HCapplication
+    {
+
         /// <summary>
         /// SQR 控件。
         /// </summary>
@@ -20,7 +22,7 @@ namespace NrcmWeb.HCapply {
         /// 若要进行修改，请将字段声明从设计器文件移到代码隐藏文件。
         /// </remarks>
         protected global::System.Web.UI.WebControls.TextBox SQR;
-        
+
         /// <summary>
         /// GSD 控件。
         /// </summary>
@@ -28,8 +30,8 @@ namespace NrcmWeb.HCapply {
         /// 自动生成的字段。
         /// 若要进行修改，请将字段声明从设计器文件移到代码隐藏文件。
         /// </remarks>
-        protected global::System.Web.UI.WebControls.TextBox GSD;
-        
+        protected global::System.Web.UI.WebControls.DropDownList GSD;
+
         /// <summary>
         /// LXDH 控件。
         /// </summary>
@@ -38,7 +40,7 @@ namespace NrcmWeb.HCapply {
         /// 若要进行修改，请将字段声明从设计器文件移到代码隐藏文件。
         /// </remarks>
         protected global::System.Web.UI.WebControls.TextBox LXDH;
-        
+
         /// <summary>
         /// SJ 控件。
         /// </summary>
@@ -47,7 +49,7 @@ namespace NrcmWeb.HCapply {
         /// 若要进行修改，请将字段声明从设计器文件移到代码隐藏文件。
         /// </remarks>
         protected global::System.Web.UI.WebControls.TextBox SJ;
-        
+
         /// <summary>
         /// SQBM 控件。
         /// </summary>
@@ -56,7 +58,7 @@ namespace NrcmWeb.HCapply {
         /// 若要进行修改，请将字段声明从设计器文件移到代码隐藏文件。
         /// </remarks>
         protected global::System.Web.UI.WebControls.TextBox SQBM;
-        
+
         /// <summary>
         /// SQKS 控件。
         /// </summary>
@@ -65,7 +67,7 @@ namespace NrcmWeb.HCapply {
         /// 若要进行修改，请将字段声明从设计器文件移到代码隐藏文件。
         /// </remarks>
         protected global::System.Web.UI.WebControls.TextBox SQKS;
-        
+
         /// <summary>
         /// DYJXH 控件。
         /// </summary>
@@ -74,7 +76,7 @@ namespace NrcmWeb.HCapply {
         /// 若要进行修改，请将字段声明从设计器文件移到代码隐藏文件。
         /// </remarks>
         protected global::System.Web.UI.WebControls.TextBox DYJXH;
-        
+
         /// <summary>
         /// HCLX 控件。
         /// </summary>
@@ -83,7 +85,7 @@ namespace NrcmWeb.HCapply {
         /// 若要进行修改，请将字段声明从设计器文件移到代码隐藏文件。
         /// </remarks>
         protected global::System.Web.UI.WebControls.TextBox HCLX;
-        
+
         /// <summary>
         /// SL 控件。
         /// </summary>
@@ -92,7 +94,7 @@ namespace NrcmWeb.HCapply {
         /// 若要进行修改，请将字段声明从设计器文件移到代码隐藏文件。
         /// </remarks>
         protected global::System.Web.UI.WebControls.TextBox SL;
-        
+
         /// <summary>
         /// addHC 控件。
         /// </summary>
@@ -101,7 +103,7 @@ namespace NrcmWeb.HCapply {
         /// 若要进行修改，请将字段声明从设计器文件移到代码隐藏文件。
         /// </remarks>
         protected global::System.Web.UI.WebControls.Button addHC;
-        
+
         /// <summary>
         /// GridView1 控件。
         /// </summary>
@@ -110,7 +112,7 @@ namespace NrcmWeb.HCapply {
         /// 若要进行修改，请将字段声明从设计器文件移到代码隐藏文件。
         /// </remarks>
         protected global::System.Web.UI.WebControls.GridView GridView1;
-        
+
         /// <summary>
         /// Button_TJ 控件。
         /// </summary>
