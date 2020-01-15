@@ -61,12 +61,23 @@ namespace NrcmWeb.HCapply
 
         protected void addHC_Click(object sender, EventArgs e)
         {
+            int SQXID;
             if (Session["ID"] == null)
-                Session["ID"] = 1;
+            {
+                SQXID = 1;
+            }
+               
             else
             {
-                int ID = Session["ID"];
+                SQXID = Convert.ToInt32(Session["ID"]) + 1;
             }
+            Session["ID"] = SQXID;
+
+            string sqbm = SQBM.Text;
+            string sqks = SQKS.Text;
+            string dyjxh = DYJXH.Text;
+            string 
+
         }
     }
 }
