@@ -22,12 +22,44 @@ namespace NrcmWeb.HCapply
         }
 
         public void bindData()
-        {
-            if (Session["haocai"] == null)
-                return;
-            HaoCaiItem haoCaiItem = Session["haocai"] as HaoCaiItem;
-            GridView1.DataSource = (Session["haocai"] as HaoCaiItem).HaoCaiInItem;
-            GridView1.DataBind();
+        {  
+            if (Session["haocai"] != null)
+            {
+                HaoCaiItem haoCaiItem = Session["haocai"] as HaoCaiItem;
+                GridView1.DataSource = (Session["haocai"] as HaoCaiItem).HaoCaiInItem;
+                GridView1.DataBind();
+            }
+             
+
+
+            else 
+            {
+                DataTable dt = new DataTable();
+
+                dt.Columns.Add("SQXID");
+                dt.Columns.Add("SQBM");
+                dt.Columns.Add("SQKS");
+                dt.Columns.Add("DYJXH");
+                dt.Columns.Add("HCLX");
+                dt.Columns.Add("SL");
+
+                if (dt.Rows.Count == 0)
+                {
+                    dt.Rows.Add(dt.NewRow());
+                }
+
+                GridView1.DataSource = dt;
+                GridView1.DataBind();
+                int columnCount = dt.Columns.Count;
+                GridView1.Rows[0].Cells.Clear();
+                GridView1.Rows[0].Cells.Add(new TableCell());
+                GridView1.Rows[0].Cells[0].ColumnSpan = columnCount;
+                GridView1.Rows[0].Cells[0].Text = "没有记录";
+                GridView1.Rows[0].Cells[0].Style.Add("text-align", "center");
+
+            }
+
+
 
 
             //List<Class1> test1 = new List<Class1>();
@@ -58,13 +90,13 @@ namespace NrcmWeb.HCapply
         {
             HaoCaiItem haoCaiItem = Session["haocai"] as HaoCaiItem;
             List<HaoCaiItem> lists = (Session["haocai"] as HaoCaiItem).HaoCaiInItem;
-            for (int i=0;i< lists.Count;i++)
+            for (int i = 0; i < lists.Count; i++)
             {
                 if (lists[i].SQXID == Convert.ToInt32(e.Keys[0].ToString()))
                 {
                     lists.Remove(lists[i]);
                 }
-                
+
             }
 
             bindData();
@@ -78,7 +110,7 @@ namespace NrcmWeb.HCapply
             {
                 sqxid = 1;
             }
-               
+
             else
             {
                 sqxid = Convert.ToInt32(Session["ID"]) + 1;

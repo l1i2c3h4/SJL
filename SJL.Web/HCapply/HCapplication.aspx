@@ -64,7 +64,7 @@
 
         <asp:GridView ID="GridView1" runat="server" EmptyDataText="数据为空" AutoGenerateColumns="False" Width="705px" Height="85px" DataKeyNames="SQXID" OnRowDeleting="GridView1_RowDeleting">
             <Columns>
-                <asp:BoundField HeaderText="申请项ID" DataField="SQXID" Visible="false">
+                <asp:BoundField HeaderText="申请项ID" DataField="SQXID" Visible="true">
                     <ItemStyle HorizontalAlign="Center" />
                 </asp:BoundField>
                 <asp:BoundField HeaderText="申请部门" DataField="SQBM">

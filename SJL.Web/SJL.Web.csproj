@@ -99,6 +99,7 @@
     <Content Include="登陆.aspx" />
   </ItemGroup>
   <ItemGroup>
+    <Compile Include="common\GridviewControl.cs" />
     <Compile Include="Default\Default.aspx.cs">
       <DependentUpon>Default.aspx</DependentUpon>
       <SubType>ASPXCodeBehind</SubType>
