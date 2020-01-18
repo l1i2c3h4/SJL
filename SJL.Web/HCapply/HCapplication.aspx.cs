@@ -1,9 +1,6 @@
 using System;
 using System.Collections.Generic;
 using System.Data;
-using System.Linq;
-using System.Web;
-using System.Web.UI;
 using System.Web.UI.WebControls;
 
 namespace NrcmWeb.HCapply
@@ -22,17 +19,17 @@ namespace NrcmWeb.HCapply
         }
 
         public void bindData()
-        {  
-            if (Session["haocai"] != null)
+        {
+            if (Session["haocai"] != null && (Session["haocai"] as HaoCaiItem).HaoCaiInItem.Count != 0)
             {
                 HaoCaiItem haoCaiItem = Session["haocai"] as HaoCaiItem;
-                GridView1.DataSource = (Session["haocai"] as HaoCaiItem).HaoCaiInItem;
+                GridView1.DataSource = haoCaiItem.HaoCaiInItem;
                 GridView1.DataBind();
             }
-             
 
 
-            else 
+
+            else
             {
                 DataTable dt = new DataTable();
 
@@ -42,6 +39,7 @@ namespace NrcmWeb.HCapply
                 dt.Columns.Add("DYJXH");
                 dt.Columns.Add("HCLX");
                 dt.Columns.Add("SL");
+                dt.Columns.Add("");
 
                 if (dt.Rows.Count == 0)
                 {
@@ -88,7 +86,6 @@ namespace NrcmWeb.HCapply
 
         protected void GridView1_RowDeleting(object sender, GridViewDeleteEventArgs e)
         {
-            HaoCaiItem haoCaiItem = Session["haocai"] as HaoCaiItem;
             List<HaoCaiItem> lists = (Session["haocai"] as HaoCaiItem).HaoCaiInItem;
             for (int i = 0; i < lists.Count; i++)
             {
