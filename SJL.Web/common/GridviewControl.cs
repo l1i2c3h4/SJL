@@ -24,7 +24,7 @@ namespace NrcmWeb.common
         public static void ResetGridView(GridView gridview)
         {
             //如果数据为空则重新构造Gridview
-            if (ab && gridview.Rows[0].Cells[0].Text == EmptyText)
+            if (gridview.Rows.Count == 1 && gridview.Rows[0].Cells[0].Text == EmptyText)
             {
                 int columnCount = gridview.Columns.Count;
                 gridview.Rows[0].Cells.Clear();
