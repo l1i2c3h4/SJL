@@ -2,6 +2,8 @@ using System;
 using System.Collections.Generic;
 using System.Data;
 using System.Web.UI.WebControls;
+using SJL.Bll.HCapply;
+using SJL.Common.HCapply;
 
 namespace NrcmWeb.HCapply
 {
@@ -32,7 +34,7 @@ namespace NrcmWeb.HCapply
             else
             {
                 DataTable dt = new DataTable();
-
+                //添加表头信息
                 dt.Columns.Add("SQXID");
                 dt.Columns.Add("SQBM");
                 dt.Columns.Add("SQKS");
@@ -40,12 +42,13 @@ namespace NrcmWeb.HCapply
                 dt.Columns.Add("HCLX");
                 dt.Columns.Add("SL");
                 dt.Columns.Add("");
-
+                //添加一个空行
                 if (dt.Rows.Count == 0)
                 {
                     dt.Rows.Add(dt.NewRow());
                 }
 
+                //设备空行显示内容
                 GridView1.DataSource = dt;
                 GridView1.DataBind();
                 int columnCount = dt.Columns.Count;
@@ -126,6 +129,22 @@ namespace NrcmWeb.HCapply
             haoCaiItem.addHaoCai(sqxid, sqbm, sqks, dyjxh, hclx, sl);
             bindData();
 
+        }
+
+        protected void Button_TJ_Click(object sender, EventArgs e)
+        {
+            HCApply hcapply = new HCApply
+            {
+                SQID = Guid.NewGuid().ToString(),
+                petitioner = SQR.Text,
+                location = GSD.Text,
+                phone = LXDH.Text,
+                time = SJ.Text,
+                state = 1
+            };
+            HCApplyBLL hCApplyBLL = new HCApplyBLL();
+            hCApplyBLL.AddHCApplyBLL(hcapply);
+            Response.Write("<script>alert('提交成功！');location='javascript:history.go(-1)';</script>");
         }
     }
 }

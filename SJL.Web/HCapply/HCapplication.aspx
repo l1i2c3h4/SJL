@@ -93,7 +93,7 @@
         <table>
             <tr>
                 <td>
-                    <asp:Button ID="Button_TJ" runat="server" Text=" 提交申请" />
+                    <asp:Button ID="Button_TJ" runat="server" Text=" 提交申请" OnClick="Button_TJ_Click" />
                 </td>
             </tr>
         </table>

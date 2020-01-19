@@ -67,16 +67,19 @@
       <HintPath>..\packages\AspNetPager_CN.7.5.1\lib\AspNetPager.dll</HintPath>
     </Reference>
     <Reference Include="System" />
+    <Reference Include="System.Configuration" />
     <Reference Include="System.Data" />
     <Reference Include="System.Data.Entity" />
     <Reference Include="System.XML" />
   </ItemGroup>
   <ItemGroup>
+    <Compile Include="HCapply\HCApplyDLL.cs" />
     <Compile Include="ObjectContextExt.cs" />
     <Compile Include="ObjectQueryArgument.cs" />
     <Compile Include="Properties\AssemblyInfo.cs" />
     <Compile Include="SmallDictionaryDAL.cs" />
     <Compile Include="EntityUtility.cs" />
+    <Compile Include="SqlHelper.cs" />
     <Compile Include="UserRight\ApplicationModuleDal.cs" />
     <Compile Include="UserRight\RoleRightDal.cs" />
     <Compile Include="UserRight\UserDal.cs" />
