@@ -10,6 +10,7 @@ namespace SJL.Dal.HCapply
 {
     public class HCApplyDLL
     {
+        //新增耗材申请
         public void AddHCApplyDll(HCApply hCApply)
         {
             using (SqlHelper db = new SqlHelper())
@@ -30,5 +31,27 @@ namespace SJL.Dal.HCapply
             }
 
         }
+
+        public void AddHCApplyDetailsDLL(HCApplyDetails hCApplyDetails)
+        {
+            using (SqlHelper db = new SqlHelper())
+            {
+                string sql = "insert into HCApplyDetails (" +
+                    "SQID,department,room,printerModel,consumablesModel,number) values(" +
+                    "@SQID,@department,@room,@printerModel,@consumablesModel,@number)";
+                using (DbCommand command = db.GetSqlStringCommond(sql))
+                {
+                    db.AddInParameter(command, "@SQID", DbType.String, hCApplyDetails.SQID);
+                    db.AddInParameter(command, "@department", DbType.Int32, hCApplyDetails.department);
+                    db.AddInParameter(command, "@room", DbType.String, hCApplyDetails.room);
+                    db.AddInParameter(command, "@printerModel", DbType.String, hCApplyDetails.printerModel);
+                    db.AddInParameter(command, "@consumablesModel", DbType.String, hCApplyDetails.consumablesModel);
+                    db.AddInParameter(command, "@number", DbType.String, hCApplyDetails.number);
+                    db.ExecuteNonQuery(command);
+                }
+            }
+        }
+
+
     }
 }

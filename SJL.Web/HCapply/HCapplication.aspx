@@ -16,8 +16,8 @@
                     <td>归属地：</td>
                     <td>
                         <asp:DropDownList ID="GSD" runat="server" Height="25px" Width="153px">
-                            <asp:ListItem Selected="True"> 南宁</asp:ListItem>
-                            <asp:ListItem>桂林</asp:ListItem>
+                            <asp:ListItem Selected="True" Value="南宁" Text="南宁"> </asp:ListItem>
+                            <asp:ListItem Value="桂林" Text="桂林"></asp:ListItem>
                         </asp:DropDownList>
                         </td>
                 </tr>

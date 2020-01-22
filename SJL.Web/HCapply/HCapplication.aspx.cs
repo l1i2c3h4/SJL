@@ -142,7 +142,29 @@ namespace NrcmWeb.HCapply
                 time = SJ.Text,
                 state = 1
             };
+
+            if (Session["haocai"] == null)
+            {
+                Response.Write("<script>alert('请输入耗材不能为空！');location='javascript:history.go(-1)';</script>");
+                return;
+            }
+
+            List<HaoCaiItem> lists = (Session["haocai"] as HaoCaiItem).HaoCaiInItem;
+            HCApplyDetails hCApplyDetails = new HCApplyDetails();
             HCApplyBLL hCApplyBLL = new HCApplyBLL();
+            for (int i = 0; i < lists.Count; i++)
+            {
+                hCApplyDetails.SQID = hcapply.SQID;
+                hCApplyDetails.XDID = lists[i].SQXID;
+                hCApplyDetails.department = lists[i].SQBM;
+                hCApplyDetails.room = lists[i].SQKS;
+                hCApplyDetails.printerModel = lists[i].DYJXH;
+                hCApplyDetails.consumablesModel = lists[i].HCLX;
+                hCApplyDetails.number = lists[i].SL;
+                hCApplyBLL.AddHCApplyDetailsBLL(hCApplyDetails);
+            }
+
+           
             hCApplyBLL.AddHCApplyBLL(hcapply);
             Response.Write("<script>alert('提交成功！');location='javascript:history.go(-1)';</script>");
         }

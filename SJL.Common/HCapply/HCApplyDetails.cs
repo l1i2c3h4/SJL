@@ -5,10 +5,10 @@ using System.Text;
 
 namespace SJL.Common.HCapply
 {
-    class HCApplyDetails
+    public class HCApplyDetails
     {
-        public int SQID { get; set; }
-        public string XDID { get; set; }
+        public string SQID { get; set; }
+        public int XDID { get; set; }
         public string department { get; set; }
         public string room { get; set; }
         public string printerModel { get; set; }

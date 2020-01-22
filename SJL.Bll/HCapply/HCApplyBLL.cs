@@ -14,5 +14,11 @@ namespace SJL.Bll.HCapply
             HCApplyDLL hCApplyDLL = new HCApplyDLL();
             hCApplyDLL.AddHCApplyDll(hCApply);
         }
+
+        public void AddHCApplyDetailsBLL(HCApplyDetails hCApplyDetails)
+        {
+            HCApplyDLL hCApplyDLL = new HCApplyDLL();
+            hCApplyDLL.AddHCApplyDetailsDLL(hCApplyDetails);
+        }
     }
 }

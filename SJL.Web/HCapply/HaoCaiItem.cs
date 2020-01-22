@@ -30,6 +30,7 @@ namespace NrcmWeb.HCapply
 
             HaoCaiItem HaoCai = new HaoCaiItem
             {
+
                 SQXID = SQXID,
                 SQBM = SQBM,
                 SQKS = SQKS,
@@ -42,9 +43,6 @@ namespace NrcmWeb.HCapply
             {
                 Items.Add(HaoCai);
             }
-
         }
-
-
     }
 }
