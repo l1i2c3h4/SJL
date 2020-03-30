@@ -44,7 +44,16 @@ namespace SJL.Web.HttpCode
             if (SJL.Bll.UserRight.UserBLL.isAdmin(user)) return;
             //检测用户权限
             if (!SJL.Bll.UserRight.RoleRightBLL.canAccessPage(user.RoleID, requestPage))
-                application.Response.Redirect("~/UserRight/AccessDeny.aspx");
+            {
+                if (requestPage == "sqbmapprove.aspx" || requestPage == "xxglyapprove.aspx"
+                    || requestPage == "hcapplication.aspx" || requestPage == "sqbm.aspx" || requestPage == "xxgly.aspx"
+                    || requestPage == "xxldapprove.aspx" || requestPage == "xxld.aspx" || requestPage == "hcsearch.aspx"
+                    || requestPage == "hcsearchdetails.aspx")
+                    application.Response.Redirect("~/HCapply/HCAccessDeny.aspx");
+                else
+                    application.Response.Redirect("~/UserRight/AccessDeny.aspx");
+            }
+
         }
 
         /// <summary>

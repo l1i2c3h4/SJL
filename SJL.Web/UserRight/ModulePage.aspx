@@ -84,8 +84,8 @@
         <br />
         <asp:Button ID="addButton" runat="server" Text="添加"
             OnClick="addButton_Click" />
-        <asp:Button ID="generateButton" runat="server" OnClick="generateButton_Click"
-            Text="自动生成模块数据" />
+       <!--<asp:Button ID="generateButton" runat="server" OnClick="generateButton_Click"
+            Text="自动生成模块数据" />-->
         <br />
     </asp:Panel>
     <asp:Panel ID="editPanel" runat="server">

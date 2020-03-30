@@ -21,7 +21,7 @@ namespace NrcmWeb
             string u = userName.Text;
             string p = password.Text;
             var user = UserBLL.getByID(u);
-            if (user.Password == p)
+            if (user != null &&user.Password == p)
             {
                 WebUtility.currentUser = user;
                 Response.Redirect("~/Default/Default.aspx");

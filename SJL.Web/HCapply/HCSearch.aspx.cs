@@ -10,7 +10,7 @@ using System.Web.UI.WebControls;
 
 namespace NrcmWeb.HCapply
 {
-    public partial class XXGLYApprove : System.Web.UI.Page
+    public partial class HCSearch : System.Web.UI.Page
     {
         protected void Page_Load(object sender, EventArgs e)
         {
@@ -24,7 +24,7 @@ namespace NrcmWeb.HCapply
         {
             HCApplyBLL hCApplyBLL = new HCApplyBLL();
             List<HCApply> lists = new List<HCApply>();
-            lists = hCApplyBLL.SearchHCApplyBLL(2);
+            lists = hCApplyBLL.HCSearchHCApplyBLL();
             if (lists.Count != 0)
             {
                 GridView1.DataSource = lists;
@@ -56,7 +56,7 @@ namespace NrcmWeb.HCapply
                 GridView1.Rows[0].Cells.Clear();
                 GridView1.Rows[0].Cells.Add(new TableCell());
                 GridView1.Rows[0].Cells[0].ColumnSpan = columnCount;
-                GridView1.Rows[0].Cells[0].Text = "没有需要审批的项目";
+                GridView1.Rows[0].Cells[0].Text = "没有历史记录";
                 GridView1.Rows[0].Cells[0].Style.Add("text-align", "center");
 
             }

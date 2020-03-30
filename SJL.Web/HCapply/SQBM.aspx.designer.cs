@@ -15,15 +15,6 @@ namespace NrcmWeb.HCapply
     {
 
         /// <summary>
-        /// form1 控件。
-        /// </summary>
-        /// <remarks>
-        /// 自动生成的字段。
-        /// 若要进行修改，请将字段声明从设计器文件移到代码隐藏文件。
-        /// </remarks>
-        protected global::System.Web.UI.HtmlControls.HtmlForm form1;
-
-        /// <summary>
         /// SQR 控件。
         /// </summary>
         /// <remarks>
@@ -33,13 +24,13 @@ namespace NrcmWeb.HCapply
         protected global::System.Web.UI.WebControls.TextBox SQR;
 
         /// <summary>
-        /// GSD 控件。
+        /// SQBM1 控件。
         /// </summary>
         /// <remarks>
         /// 自动生成的字段。
         /// 若要进行修改，请将字段声明从设计器文件移到代码隐藏文件。
         /// </remarks>
-        protected global::System.Web.UI.WebControls.TextBox GSD;
+        protected global::System.Web.UI.WebControls.TextBox SQBM1;
 
         /// <summary>
         /// LXDH 控件。
@@ -51,13 +42,13 @@ namespace NrcmWeb.HCapply
         protected global::System.Web.UI.WebControls.TextBox LXDH;
 
         /// <summary>
-        /// SJ 控件。
+        /// GSD 控件。
         /// </summary>
         /// <remarks>
         /// 自动生成的字段。
         /// 若要进行修改，请将字段声明从设计器文件移到代码隐藏文件。
         /// </remarks>
-        protected global::System.Web.UI.WebControls.TextBox SJ;
+        protected global::System.Web.UI.WebControls.TextBox GSD;
 
         /// <summary>
         /// GridView1 控件。
@@ -69,75 +60,102 @@ namespace NrcmWeb.HCapply
         protected global::System.Web.UI.WebControls.GridView GridView1;
 
         /// <summary>
-        /// Label1 控件。
+        /// SQR2 控件。
         /// </summary>
         /// <remarks>
         /// 自动生成的字段。
         /// 若要进行修改，请将字段声明从设计器文件移到代码隐藏文件。
         /// </remarks>
-        protected global::System.Web.UI.WebControls.Label Label1;
+        protected global::System.Web.UI.WebControls.Label SQR2;
 
         /// <summary>
-        /// Label2 控件。
+        /// SQSJ 控件。
         /// </summary>
         /// <remarks>
         /// 自动生成的字段。
         /// 若要进行修改，请将字段声明从设计器文件移到代码隐藏文件。
         /// </remarks>
-        protected global::System.Web.UI.WebControls.Label Label2;
+        protected global::System.Web.UI.WebControls.Label SQSJ;
 
         /// <summary>
-        /// Label3 控件。
+        /// SQBMview 控件。
         /// </summary>
         /// <remarks>
         /// 自动生成的字段。
         /// 若要进行修改，请将字段声明从设计器文件移到代码隐藏文件。
         /// </remarks>
-        protected global::System.Web.UI.WebControls.Label Label3;
+        protected global::System.Web.UI.WebControls.Label SQBMview;
 
         /// <summary>
-        /// Label4 控件。
+        /// SQBMtime 控件。
         /// </summary>
         /// <remarks>
         /// 自动生成的字段。
         /// 若要进行修改，请将字段声明从设计器文件移到代码隐藏文件。
         /// </remarks>
-        protected global::System.Web.UI.WebControls.Label Label4;
+        protected global::System.Web.UI.WebControls.Label SQBMtime;
 
         /// <summary>
-        /// Label5 控件。
+        /// XXGLYview 控件。
         /// </summary>
         /// <remarks>
         /// 自动生成的字段。
         /// 若要进行修改，请将字段声明从设计器文件移到代码隐藏文件。
         /// </remarks>
-        protected global::System.Web.UI.WebControls.Label Label5;
+        protected global::System.Web.UI.WebControls.Label XXGLYview;
 
         /// <summary>
-        /// Label6 控件。
+        /// XXGLYtime 控件。
         /// </summary>
         /// <remarks>
         /// 自动生成的字段。
         /// 若要进行修改，请将字段声明从设计器文件移到代码隐藏文件。
         /// </remarks>
-        protected global::System.Web.UI.WebControls.Label Label6;
+        protected global::System.Web.UI.WebControls.Label XXGLYtime;
 
         /// <summary>
-        /// Label7 控件。
+        /// XXLDview 控件。
         /// </summary>
         /// <remarks>
         /// 自动生成的字段。
         /// 若要进行修改，请将字段声明从设计器文件移到代码隐藏文件。
         /// </remarks>
-        protected global::System.Web.UI.WebControls.Label Label7;
+        protected global::System.Web.UI.WebControls.Label XXLDview;
 
         /// <summary>
-        /// Label8 控件。
+        /// XXLDtime 控件。
         /// </summary>
         /// <remarks>
         /// 自动生成的字段。
         /// 若要进行修改，请将字段声明从设计器文件移到代码隐藏文件。
         /// </remarks>
-        protected global::System.Web.UI.WebControls.Label Label8;
+        protected global::System.Web.UI.WebControls.Label XXLDtime;
+
+        /// <summary>
+        /// TB_SQBMview 控件。
+        /// </summary>
+        /// <remarks>
+        /// 自动生成的字段。
+        /// 若要进行修改，请将字段声明从设计器文件移到代码隐藏文件。
+        /// </remarks>
+        protected global::System.Web.UI.WebControls.TextBox TB_SQBMview;
+
+        /// <summary>
+        /// pass 控件。
+        /// </summary>
+        /// <remarks>
+        /// 自动生成的字段。
+        /// 若要进行修改，请将字段声明从设计器文件移到代码隐藏文件。
+        /// </remarks>
+        protected global::System.Web.UI.WebControls.Button pass;
+
+        /// <summary>
+        /// noPass 控件。
+        /// </summary>
+        /// <remarks>
+        /// 自动生成的字段。
+        /// 若要进行修改，请将字段声明从设计器文件移到代码隐藏文件。
+        /// </remarks>
+        protected global::System.Web.UI.WebControls.Button noPass;
     }
 }

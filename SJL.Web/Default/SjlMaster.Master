@@ -14,9 +14,12 @@
     <form id="form1" runat="server">    
     <div>
         <uc1:Header ID="Header1" runat="server" />
+        <asp:Label ID="Label1" runat="server" Text="Label"></asp:Label>
     </div>
     <div>  
         <asp:ContentPlaceHolder ID="content" runat="server">
+        
+            
         
         </asp:ContentPlaceHolder>    </div>
         

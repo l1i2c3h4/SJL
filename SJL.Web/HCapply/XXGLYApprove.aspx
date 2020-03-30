@@ -7,22 +7,26 @@
             <Columns>
                 <asp:TemplateField HeaderText="申请ID">
                     <ItemTemplate>
-                        <a href="Resume.aspx?id=<%#Eval("SQID")%>">查看</a>
+                        <a href="XXGLY.aspx?id=<%#Eval("SQID")%>">查看详情</a>
                     </ItemTemplate>
                     <ItemStyle HorizontalAlign="Center" />
                 </asp:TemplateField>
-                <asp:BoundField HeaderText="申请人" DataField="SQR">
+                <asp:BoundField HeaderText="申请人" DataField="petitioner">
                     <ItemStyle HorizontalAlign="Center" />
                 </asp:BoundField>
-                <asp:BoundField HeaderText="归属地" DataField="GSD">
+                <asp:BoundField HeaderText="申请部门" DataField="department">
                     <ItemStyle HorizontalAlign="Center" />
                 </asp:BoundField>
-                <asp:BoundField HeaderText="联系电话" DataField="LXDH">
+                <asp:BoundField HeaderText="归属地" DataField="location">
                     <ItemStyle HorizontalAlign="Center" />
                 </asp:BoundField>
-                <asp:BoundField HeaderText="时间" DataField="SJ">
+                <asp:BoundField HeaderText="联系电话" DataField="phone">
                     <ItemStyle HorizontalAlign="Center" />
                 </asp:BoundField>
+                <asp:BoundField HeaderText="时间" DataField="time">
+                    <ItemStyle HorizontalAlign="Center" />
+                </asp:BoundField>
+
             </Columns>
         </asp:GridView>
 </asp:Content>

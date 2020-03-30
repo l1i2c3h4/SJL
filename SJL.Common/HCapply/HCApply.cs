@@ -9,6 +9,7 @@ namespace SJL.Common.HCapply
     {
         public string SQID { get; set; }
         public string location { get; set; }
+        public string department { get; set; }
         public string petitioner { get; set; }
         public string phone { get; set; }
         public string time { get; set; }
@@ -17,6 +18,7 @@ namespace SJL.Common.HCapply
         public string SQBMview { get; set; }
         public string SQBMtime { get; set; }
         public string XXGLYview { get; set; }
+        public string XXGLYtime { get; set; }
         public string XXLDview { get; set; }
         public string XXLDtime { get; set; }
     }

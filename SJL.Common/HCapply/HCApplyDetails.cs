@@ -9,7 +9,7 @@ namespace SJL.Common.HCapply
     {
         public string SQID { get; set; }
         public int XDID { get; set; }
-        public string department { get; set; }
+        
         public string room { get; set; }
         public string printerModel { get; set; }
         public string consumablesModel { get; set; }

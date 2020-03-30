@@ -1,15 +1,14 @@
-﻿<%@ Page Title="" Language="C#" MasterPageFile="~/HCapply/HCmain.master" AutoEventWireup="true" CodeBehind="SQBMApprove.aspx.cs" Inherits="NrcmWeb.HCapply.SQBMApprove" %>
-
+﻿<%@ Page Title="" Language="C#" MasterPageFile="~/HCapply/HCmain.master" AutoEventWireup="true" CodeBehind="HCSearch.aspx.cs" Inherits="NrcmWeb.HCapply.HCSearch" %>
 <asp:Content ID="Content1" ContentPlaceHolderID="head" runat="server">
 </asp:Content>
 <asp:Content ID="Content2" ContentPlaceHolderID="ContentPlaceHolder1" runat="server">
     <div>
-        <h3>申请部门领导审批</h3>
+        <h3>耗材审批情况查询</h3>
         <asp:GridView ID="GridView1" runat="server" AutoGenerateColumns="False" Width="705px" Height="85px">
             <Columns>
                 <asp:TemplateField HeaderText="申请ID">
                     <ItemTemplate>
-                        <a href="SQBM.aspx?id=<%#Eval("SQID")%>">查看详情</a>
+                        <a href="HCSearchDetails.aspx?id=<%#Eval("SQID")%>">查看详情</a>
                     </ItemTemplate>
                     <ItemStyle HorizontalAlign="Center" />
                 </asp:TemplateField>

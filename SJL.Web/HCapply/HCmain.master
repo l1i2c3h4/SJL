@@ -39,11 +39,11 @@
                                     </td>
                                 </tr>
                                 <tr class="Menu_Module_MyBox" style="cursor: default;">
-                                    <td><a href="">信息工程部领导审批</a>
+                                    <td><a href="./XXLDApprove.aspx">信息工程部领导审批</a>
                                     </td>
                                 </tr>
                                 <tr class="Menu_Module_MyBox" style="cursor: default;">
-                                    <td><a href="">审批进度查询</a>
+                                    <td><a href="./HCSearch.aspx">审批进度查询</a>
                                     </td>
                                 </tr>
                                 <tr class="Menu_Module_MyBox" style="cursor: default;">

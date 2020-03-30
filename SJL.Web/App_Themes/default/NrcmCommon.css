@@ -1,6 +1,7 @@
 ﻿body { font-family:宋体; font-size:small;  	}
 /*最外层DIV，整个页面居中*/
-div#main{width:1000px;  margin-left:auto;  margin-right:auto;   }
+div#main{width:1267px;  
+margin-left:auto;  margin-right:auto;   }
 a{text-decoration:none; color:Black;}
 a:hover{color:Orange; font-weight:bold;}
 /*div#NavMenu页面顶部导航菜单*/

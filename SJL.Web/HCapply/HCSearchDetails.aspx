@@ -1,11 +1,10 @@
-﻿<%@ Page Language="C#" MasterPageFile="~/HCapply/HCmain.master" AutoEventWireup="true" CodeBehind="XXGLY.aspx.cs" Inherits="NrcmWeb.HCapply.XXGLY" %>
-
+﻿<%@ Page Title="" Language="C#" MasterPageFile="~/HCapply/HCmain.master" AutoEventWireup="true" CodeBehind="HCSearchDetails.aspx.cs" Inherits="NrcmWeb.HCapply.HCSearchDetails" %>
 <asp:Content ID="Content1" ContentPlaceHolderID="head" runat="server">
 </asp:Content>
 <asp:Content ID="Content2" ContentPlaceHolderID="ContentPlaceHolder1" runat="server">
         <div>
             <div>
-                <h3>&nbsp;信息工程部耗材管理员审批
+                <h3>&nbsp;耗材申请详单查询
                 </h3>
 
                 <table width="606" height="59" border="0" cellpadding="5" cellspacing="5">
@@ -100,25 +99,6 @@
                         </tr>
                     </tbody>
                 </table>
-
-                <table width="606" height="59" border="0" cellpadding="5" cellspacing="5">
-                    <tbody>
-                        <tr>
-                            <td>信息工程部耗材管理员意见：</td>
-                            <td>
-                                <asp:TextBox ID="TB_XXGLYview" runat="server" Text="通过"></asp:TextBox>
-                            </td>
-                            <td>
-                                <asp:Button ID="pass" runat="server" Text="通过" Width="61px" OnClick="pass_Click" />
-                            </td>
-                            <td>
-                                <asp:Button ID="noPass" runat="server" Text="不通过" Width="61px" OnClick="noPass_Click" />
-                            </td>
-                        </tr>
-
-                    </tbody>
-                </table>
-
                 <br />
                 <br />
             </div>

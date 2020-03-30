@@ -9,7 +9,6 @@ namespace NrcmWeb.HCapply
     {
         public HaoCaiItem() { }
         public int SQXID { get; set; }
-        public string SQBM { get; set; }
         public string SQKS { get; set; }
         public string DYJXH { get; set; }
         public string HCLX { get; set; }
@@ -25,14 +24,13 @@ namespace NrcmWeb.HCapply
             }
         }
 
-        public void addHaoCai(int SQXID, string SQBM, string SQKS,string DYJXH,string HCLX,string SL)
+        public void addHaoCai(int SQXID, string SQKS,string DYJXH,string HCLX,string SL)
         {
 
             HaoCaiItem HaoCai = new HaoCaiItem
             {
 
                 SQXID = SQXID,
-                SQBM = SQBM,
                 SQKS = SQKS,
                 DYJXH = DYJXH,
                 HCLX = HCLX,

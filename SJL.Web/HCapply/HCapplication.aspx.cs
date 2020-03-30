@@ -36,7 +36,6 @@ namespace NrcmWeb.HCapply
                 DataTable dt = new DataTable();
                 //添加表头信息
                 dt.Columns.Add("SQXID");
-                dt.Columns.Add("SQBM");
                 dt.Columns.Add("SQKS");
                 dt.Columns.Add("DYJXH");
                 dt.Columns.Add("HCLX");
@@ -117,7 +116,6 @@ namespace NrcmWeb.HCapply
             }
             Session["ID"] = sqxid;
 
-            string sqbm = SQBM.Text;
             string sqks = SQKS.Text;
             string dyjxh = DYJXH.Text;
             string hclx = HCLX.Text;
@@ -126,7 +124,7 @@ namespace NrcmWeb.HCapply
             if (Session["haocai"] == null)
                 Session["haocai"] = new HaoCaiItem();
             HaoCaiItem haoCaiItem = Session["haocai"] as HaoCaiItem;
-            haoCaiItem.addHaoCai(sqxid, sqbm, sqks, dyjxh, hclx, sl);
+            haoCaiItem.addHaoCai(sqxid, sqks, dyjxh, hclx, sl);
             bindData();
 
         }
@@ -136,10 +134,11 @@ namespace NrcmWeb.HCapply
             HCApply hcapply = new HCApply
             {
                 SQID = Guid.NewGuid().ToString(),
+                department = SQBM.Text,
                 petitioner = SQR.Text,
                 location = GSD.Text,
                 phone = LXDH.Text,
-                time = SJ.Text,
+                time = time.Text,
                 state = 1
             };
 
@@ -156,7 +155,6 @@ namespace NrcmWeb.HCapply
             {
                 hCApplyDetails.SQID = hcapply.SQID;
                 hCApplyDetails.XDID = lists[i].SQXID;
-                hCApplyDetails.department = lists[i].SQBM;
                 hCApplyDetails.room = lists[i].SQKS;
                 hCApplyDetails.printerModel = lists[i].DYJXH;
                 hCApplyDetails.consumablesModel = lists[i].HCLX;

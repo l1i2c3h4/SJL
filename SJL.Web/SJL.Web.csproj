@@ -76,7 +76,10 @@
     <Content Include="css\main.css" />
     <Content Include="css\reset.css" />
     <Content Include="css\tabbox_v5.css" />
+    <Content Include="HCapply\HCAccessDeny.aspx" />
     <Content Include="HCapply\HCapplication.aspx" />
+    <Content Include="HCapply\HCSearch.aspx" />
+    <Content Include="HCapply\HCSearchDetails.aspx" />
     <Content Include="HCapply\SQBM.aspx" />
     <Content Include="HCapply\SQBMApprove.aspx" />
     <Content Include="HCapply\XXGLY.aspx" />
@@ -107,8 +110,14 @@
     <Compile Include="Default\Default.aspx.designer.cs">
       <DependentUpon>Default.aspx</DependentUpon>
     </Compile>
-    <Compile Include="HCapply\Class2.cs" />
     <Compile Include="HCapply\HaoCaiItem.cs" />
+    <Compile Include="HCapply\HCAccessDeny.aspx.cs">
+      <DependentUpon>HCAccessDeny.aspx</DependentUpon>
+      <SubType>ASPXCodeBehind</SubType>
+    </Compile>
+    <Compile Include="HCapply\HCAccessDeny.aspx.designer.cs">
+      <DependentUpon>HCAccessDeny.aspx</DependentUpon>
+    </Compile>
     <Compile Include="HCapply\HCapplication.aspx.cs">
       <DependentUpon>HCapplication.aspx</DependentUpon>
       <SubType>ASPXCodeBehind</SubType>
@@ -122,6 +131,20 @@
     </Compile>
     <Compile Include="HCapply\HCmain.master.designer.cs">
       <DependentUpon>HCmain.master</DependentUpon>
+    </Compile>
+    <Compile Include="HCapply\HCSearch.aspx.cs">
+      <DependentUpon>HCSearch.aspx</DependentUpon>
+      <SubType>ASPXCodeBehind</SubType>
+    </Compile>
+    <Compile Include="HCapply\HCSearch.aspx.designer.cs">
+      <DependentUpon>HCSearch.aspx</DependentUpon>
+    </Compile>
+    <Compile Include="HCapply\HCSearchDetails.aspx.cs">
+      <DependentUpon>HCSearchDetails.aspx</DependentUpon>
+      <SubType>ASPXCodeBehind</SubType>
+    </Compile>
+    <Compile Include="HCapply\HCSearchDetails.aspx.designer.cs">
+      <DependentUpon>HCSearchDetails.aspx</DependentUpon>
     </Compile>
     <Compile Include="HCapply\SQBM.aspx.cs">
       <DependentUpon>SQBM.aspx</DependentUpon>

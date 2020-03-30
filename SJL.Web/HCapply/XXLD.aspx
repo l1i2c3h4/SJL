@@ -1,115 +1,126 @@
-﻿<%@ Page Language="C#" AutoEventWireup="true" CodeBehind="XXLD.aspx.cs" Inherits="NrcmWeb.HCapply.XXLD" %>
+﻿<%@ Page Language="C#" MasterPageFile="~/HCapply/HCmain.master" AutoEventWireup="true" CodeBehind="XXLD.aspx.cs" Inherits="NrcmWeb.HCapply.XXLD" %>
 
-<!DOCTYPE html>
-
-<html xmlns="http://www.w3.org/1999/xhtml">
-<head runat="server">
-    <meta http-equiv="Content-Type" content="text/html; charset=utf-8" />
-    <title></title>
-</head>
-<body>
-    <form id="form1" runat="server">
+<asp:Content ID="Content1" ContentPlaceHolderID="head" runat="server">
+</asp:Content>
+<asp:Content ID="Content2" ContentPlaceHolderID="ContentPlaceHolder1" runat="server">
         <div>
-            <h3>信息工程部领导审批</h3>
+            <div>
+                <h3>&nbsp;信息工程部领导审批
+                </h3>
 
-            <table width="606" height="59" border="0" cellpadding="5" cellspacing="5">
-                <tbody>
-                    <tr>
-                        <td>申请人：</td>
-                        <td>
-                            <asp:TextBox ID="SQR" runat="server"></asp:TextBox>
-                        </td>
-                        <td>归属地：</td>
-                        <td>
-                            <asp:TextBox ID="GSD" runat="server"></asp:TextBox></td>
-                    </tr>
-                    <tr>
-                        <td>联系电话：</td>
-                        <td>
-                            <asp:TextBox ID="LXDH" runat="server"></asp:TextBox></td>
+                <table width="606" height="59" border="0" cellpadding="5" cellspacing="5">
+                    <tbody>
+                        <tr>
+                            <td>申请人：</td>
+                            <td>
+                                <asp:TextBox ID="SQR" runat="server" BackColor="#999999" ReadOnly="True"></asp:TextBox>
+                            </td>
+                            <td>申请部门：</td>
+                            <td>
+                                <asp:TextBox ID="SQBM1" runat="server" BackColor="#999999" ReadOnly="True"></asp:TextBox></td>
+                        </tr>
+                        <tr>
+                            <td>联系电话：</td>
+                            <td>
+                                <asp:TextBox ID="LXDH" runat="server" BackColor="#999999" ReadOnly="True"></asp:TextBox></td>
+                            <td>归属地：</td>
+                            <td>
+                                <asp:TextBox ID="GSD" runat="server" BackColor="#999999" ReadOnly="True"></asp:TextBox></td>
 
-                        <td>时间：</td>
-                        <td>
-                            <asp:TextBox ID="SJ" runat="server"></asp:TextBox></td>
-                    </tr>
-                </tbody>
-            </table>
-            <br />
 
-            <br />
-            <br />
+                        </tr>
+                    </tbody>
+                </table>
+                <br />
 
-            <asp:GridView ID="GridView1" runat="server" AutoGenerateColumns="False" Width="705px" Height="85px">
-                <Columns>
-                    <asp:BoundField HeaderText="申请项ID" DataField="SQXID" Visible="false">
-                        <ItemStyle HorizontalAlign="Center" />
-                    </asp:BoundField>
-                    <asp:BoundField HeaderText="申请部门" DataField="SQBM">
-                        <ItemStyle HorizontalAlign="Center" />
-                    </asp:BoundField>
-                    <asp:BoundField HeaderText="申请科室" DataField="SQKS">
-                        <ItemStyle HorizontalAlign="Center" />
-                    </asp:BoundField>
-                    <asp:BoundField HeaderText="打印机型号" DataField="DYJXH">
-                        <ItemStyle HorizontalAlign="Center" />
-                    </asp:BoundField>
-                    <asp:BoundField HeaderText="耗材类型" DataField="HCLX">
-                        <ItemStyle HorizontalAlign="Center" />
-                    </asp:BoundField>
-                    <asp:BoundField HeaderText="数量" DataField="SL">
-                        <ItemStyle HorizontalAlign="Center" />
-                    </asp:BoundField>
-                </Columns>
-            </asp:GridView>
-            <br />
+                <br />
+                <br />
 
-            <br />
-            <br />
+                <asp:GridView ID="GridView1" runat="server" AutoGenerateColumns="False" Width="705px" Height="85px">
+                    <Columns>
+                        <asp:BoundField HeaderText="申请项ID" DataField="XDID" Visible="false">
+                            <ItemStyle HorizontalAlign="Center" />
+                        </asp:BoundField>
+                        <asp:BoundField HeaderText="申请科室" DataField="room">
+                            <ItemStyle HorizontalAlign="Center" />
+                        </asp:BoundField>
+                        <asp:BoundField HeaderText="打印机型号" DataField="printerModel">
+                            <ItemStyle HorizontalAlign="Center" />
+                        </asp:BoundField>
+                        <asp:BoundField HeaderText="耗材类型" DataField="consumablesModel">
+                            <ItemStyle HorizontalAlign="Center" />
+                        </asp:BoundField>
+                        <asp:BoundField HeaderText="数量" DataField="number">
+                            <ItemStyle HorizontalAlign="Center" />
+                        </asp:BoundField>
+                    </Columns>
+                </asp:GridView>
+                <br />
 
-            <table width="606" height="59" border="0" cellpadding="5" cellspacing="5">
-                <tbody>
-                    <tr>
-                        <td>申请人：</td>
-                        <td>
-                            <asp:Label ID="Label1" runat="server" Text="Label"></asp:Label>
-                        </td>
-                        <td>时间：</td>
-                        <td>
-                            <asp:Label ID="Label2" runat="server" Text="Label"></asp:Label></td>
-                    </tr>
-                    <tr>
-                        <td>申请部门领导意见：</td>
-                        <td>
-                            <asp:Label ID="Label3" runat="server" Text="Label"></asp:Label></td>
+                <br />
+                <br />
 
-                        <td>时间：</td>
-                        <td>
-                            <asp:Label ID="Label4" runat="server" Text="Label"></asp:Label></td>
-                    </tr>
-                    <tr>
-                        <td>信息工程部耗材管理员意见：</td>
-                        <td>
-                            <asp:Label ID="Label5" runat="server" Text="Label"></asp:Label></td>
+                <table width="606" height="59" border="1" cellpadding="5" cellspacing="5">
+                    <tbody>
+                        <tr>
+                            <td>申请人：</td>
+                            <td>
+                                <asp:Label ID="SQR2" runat="server" Text="Label"></asp:Label>
+                            </td>
+                            <td>时间：</td>
+                            <td>
+                                <asp:Label ID="SQSJ" runat="server" Text="Label"></asp:Label></td>
+                        </tr>
+                        <tr>
+                            <td>申请部门领导意见：</td>
+                            <td>
+                                <asp:Label ID="SQBMview" runat="server" Text="Label"></asp:Label></td>
 
-                        <td>时间：</td>
-                        <td>
-                            <asp:Label ID="Label6" runat="server" Text="Label"></asp:Label></td>
-                    </tr>
-                    <tr>
-                        <td>信息工程部领导意见：</td>
-                        <td>
-                            <asp:Label ID="Label7" runat="server" Text="Label"></asp:Label></td>
+                            <td>时间：</td>
+                            <td>
+                                <asp:Label ID="SQBMtime" runat="server" Text="Label"></asp:Label></td>
+                        </tr>
+                        <tr>
+                            <td>信息工程部耗材管理员意见：</td>
+                            <td>
+                                <asp:Label ID="XXGLYview" runat="server" Text="Label"></asp:Label></td>
 
-                        <td>时间：</td>
-                        <td>
-                            <asp:Label ID="Label8" runat="server" Text="Label"></asp:Label></td>
-                    </tr>
-                </tbody>
-            </table>
+                            <td>时间：</td>
+                            <td>
+                                <asp:Label ID="XXGLYtime" runat="server" Text="Label"></asp:Label></td>
+                        </tr>
+                        <tr>
+                            <td>信息工程部领导意见：</td>
+                            <td>
+                                <asp:Label ID="XXLDview" runat="server" Text="Label"></asp:Label></td>
 
-            <br />
-            <br />
+                            <td>时间：</td>
+                            <td>
+                                <asp:Label ID="XXLDtime" runat="server" Text="Label"></asp:Label></td>
+                        </tr>
+                    </tbody>
+                </table>
+
+                 <table width="606" height="59" border="0" cellpadding="5" cellspacing="5">
+                    <tbody>
+                        <tr>
+                            <td>信息工程部领导意见：</td>
+                            <td>
+                                <asp:TextBox ID="TB_XXLDview" runat="server" Text="通过"></asp:TextBox>
+                            </td>
+                            <td>
+                                <asp:Button ID="pass" runat="server" Text="通过" Width="61px" OnClick="pass_Click" />
+                            </td>
+                            <td>
+                                <asp:Button ID="noPass" runat="server" Text="不通过" Width="61px" OnClick="noPass_Click" />
+                            </td>
+                        </tr>
+                        
+                    </tbody>
+                </table>
+
+                <br />
+                <br />
+            </div>
         </div>
-    </form>
-</body>
-</html>
+</asp:Content>

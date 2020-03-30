@@ -1,15 +1,11 @@
-﻿using SJL.Bll.HCapply;
-using SJL.Common.HCapply;
-using System;
+﻿using System;
 using System.Collections.Generic;
-using System.Linq;
-using System.Web;
-using System.Web.UI;
-using System.Web.UI.WebControls;
+using SJL.Bll.HCapply;
+using SJL.Common.HCapply;
 
 namespace NrcmWeb.HCapply
 {
-    public partial class XXGLY : System.Web.UI.Page
+    public partial class HCSearchDetails : System.Web.UI.Page
     {
         private HCApplyBLL hCApplyBLL = new HCApplyBLL();
 
@@ -42,24 +38,6 @@ namespace NrcmWeb.HCapply
             GridView1.DataSource = lists;
             GridView1.DataBind();
 
-        }
-
-        protected void pass_Click(object sender, EventArgs e)
-        {
-            string s = TB_XXGLYview.Text;
-            int state = 3;
-            string SQID = Request.QueryString["id"];
-            hCApplyBLL.UpdateHCApplyBYSQID2BLL(SQID, s, state);
-            Response.Redirect("XXGLYApprove.aspx");
-        }
-
-        protected void noPass_Click(object sender, EventArgs e)
-        {
-            string s = TB_XXGLYview.Text;
-            int state = 0;
-            string SQID = Request.QueryString["id"];
-            hCApplyBLL.UpdateHCApplyBYSQID2BLL(SQID, s, state);
-            Response.Redirect("XXGLYApprove.aspx");
         }
     }
 }
