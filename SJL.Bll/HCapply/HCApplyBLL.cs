@@ -59,9 +59,9 @@ namespace SJL.Bll.HCapply
             hCApplyDLL.UpdataHCApplyBUSQID3DLL(SQID, s, state);
         }
 
-        public List<HCApply> HCSearchHCApplyBLL()
+        public List<HCApply> HCSearchHCApplyBLL(string sortField, string sort)
         {
-            return hCApplyDLL.HCSearchHCApplyDLL();
+            return hCApplyDLL.HCSearchHCApplyDLL(sortField,sort);
         }
     }
 }

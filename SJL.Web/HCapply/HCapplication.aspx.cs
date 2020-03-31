@@ -142,7 +142,7 @@ namespace NrcmWeb.HCapply
                 state = 1
             };
 
-            if (Session["haocai"] == null)
+            if (Session["haocai"] == null || (Session["haocai"] as HaoCaiItem).HaoCaiInItem.Count == 0)
             {
                 Response.Write("<script>alert('请输入耗材不能为空！');location='javascript:history.go(-1)';</script>");
                 return;

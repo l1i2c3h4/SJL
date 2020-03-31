@@ -16,15 +16,15 @@ namespace NrcmWeb.HCapply
         {
             if (!IsPostBack)
             {
-                bindData();
+                bindData(null,null);
             }
         }
 
-        public void bindData()
+        public void bindData(string sortField, string sort)
         {
             HCApplyBLL hCApplyBLL = new HCApplyBLL();
             List<HCApply> lists = new List<HCApply>();
-            lists = hCApplyBLL.HCSearchHCApplyBLL();
+            lists = hCApplyBLL.HCSearchHCApplyBLL(sortField, sort);
             if (lists.Count != 0)
             {
                 GridView1.DataSource = lists;
@@ -61,6 +61,64 @@ namespace NrcmWeb.HCapply
 
             }
 
+        }
+
+        protected void GridView1_RowDataBound(object sender, GridViewRowEventArgs e)
+        {
+            if (e.Row.RowType == DataControlRowType.DataRow)
+            {
+                int state = (int)DataBinder.Eval(e.Row.DataItem, "state");
+               
+
+                if (state == 1)
+                {
+                    e.Row.Cells[6].Text = "等待申请部门领导审核";
+                }
+                if (state == 2)
+                {
+                    e.Row.Cells[6].Text = "等待耗材管理员审核";
+                }
+                if (state == 3)
+                {
+                    e.Row.Cells[6].Text = "等待信息工程部领导审核";
+                }
+
+                if (state == 4)
+                {
+                    e.Row.Cells[6].Text = "审核通过";
+                }
+
+                if (state == 0)
+                {
+                    e.Row.Cells[6].Text = "审核不通过";
+                }
+            }
+        }
+
+        protected void GridView1_Sorting(object sender, GridViewSortEventArgs e)
+        {
+            GridView1.EditIndex = -1;
+            if (ViewState["sortColumn"] == null)
+            {
+
+                ViewState["sortColumn"] = e.SortExpression.ToString();
+                ViewState["sortDirection"] = "ASC";
+
+            }
+            else
+            {
+                if (ViewState["sortDirection"].ToString() == "ASC")
+                {
+                    ViewState["sortDirection"] = "DESC";
+                }
+                else
+                {
+                    ViewState["sortDirection"] = "ASC";
+                }
+
+            }
+            string sort = ViewState["sortDirection"].ToString();
+            bindData(e.SortExpression, sort);
         }
     }
 }

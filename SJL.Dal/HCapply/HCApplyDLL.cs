@@ -285,12 +285,17 @@ namespace SJL.Dal.HCapply
         /// 查询全部申请的情况
         /// </summary>
         /// <returns></returns>
-        public List<HCApply> HCSearchHCApplyDLL()
+        public List<HCApply> HCSearchHCApplyDLL(string sortField, string sort)
         {
             List<HCApply> lists = new List<HCApply>();
             using (SqlHelper db = new SqlHelper())
             {
                 string sql = "select * from HCApply ";
+                if (!string.IsNullOrEmpty(sortField))
+                {
+                    sql += " order by " + sortField + " " + sort;
+
+                }
                 using (DbCommand command = db.GetSqlStringCommond(sql))
                 {;
                     using (DbDataReader reader = db.ExecuteReader(command))
