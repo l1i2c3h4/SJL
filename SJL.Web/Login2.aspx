@@ -1,4 +1,4 @@
-﻿<%@ Page Language="C#" AutoEventWireup="true" CodeBehind="登陆.aspx.cs" Inherits="NrcmWeb.登陆" %>
+﻿<%@ Page Language="C#" AutoEventWireup="true" CodeBehind="Login2.aspx.cs" Inherits="NrcmWeb.登陆" %>
 
 <!DOCTYPE html>
 
